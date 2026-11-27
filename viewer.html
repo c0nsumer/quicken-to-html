@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Transaction History</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='3' fill='%234f46e5'/%3E%3Cpath d='M6 18v-5h3v5zM10.5 18V6h3v12zM15 18v-8h3v8z' fill='%23fff'/%3E%3C/svg%3E">
+<script>
+// Apply a saved theme before the page paints.
+try {
+  var saved = localStorage.getItem("quicken-to-html-theme");
+  if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+} catch (e) {}
+</script>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#f3f4f8, #0f1115);
+  --panel: light-dark(#ffffff, #171a20);
+  --fg: light-dark(#171a20, #e6e8ec);
+  --muted: light-dark(#626a76, #9299a6);
+  --line: light-dark(#e0e3e9, #2a2f38);
+  --band: light-dark(#e4e8f3, #262b36);
+  --zebra: light-dark(#f2f4f9, #1d2129);
+  --head: light-dark(#f0f2f6, #1c2028);
+  /* Every accent shade comes from --base, which the build's --accent option sets. */
+  --base: #4f46e5;
+  --accent: light-dark(oklch(from var(--base) 50% c h),
+    oklch(from var(--base) 76% min(c, 0.14) h));
+  --logo: oklch(from var(--base) 50% c h);
+  --on-accent: light-dark(#ffffff, #10121a);
+  --pos: light-dark(#0f7a3d, #5fd38a);
+  --hit: light-dark(#fff3c4, #40380f);
+  --mark: light-dark(#ffe27a, #7a6410);
+  --shadow: light-dark(0 1px 2px rgb(20 24 40 / 8%), none);
+}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  border-top: 3px solid var(--accent); }
+input, select, button { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+
+/* Top bar */
+header.top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px;
+  padding: 12px 20px; background: var(--panel); border-bottom: 1px solid var(--line); }
+.brand { margin-right: auto; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { width: 34px; height: 34px; flex: none; }
+h1 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+.sub { color: var(--muted); font-size: 12.5px; }
+.tabs { display: flex; padding: 3px; gap: 3px; background: var(--band); border-radius: 4px; }
+.tabs button { padding: 6px 16px; border: 0; border-radius: 3px; background: none;
+  color: var(--muted); cursor: pointer; font-weight: 600; }
+.tabs button:hover { color: var(--fg); }
+.tabs button[aria-selected="true"] { background: var(--accent); color: var(--on-accent); }
+.ghost { padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px;
+  background: var(--panel); cursor: pointer; }
+.ghost:hover { border-color: var(--accent); }
+#neg { padding: 6px 8px; color: var(--muted); font-size: 12.5px; line-height: 18px;
+  font-variant-numeric: tabular-nums; margin-right: -12px; }
+#neg:hover { color: var(--fg); }
+.pp::after { content: ")"; visibility: hidden; }
+#theme { padding: 6px; line-height: 0; color: var(--muted); }
+#theme:hover { color: var(--fg); }
+#theme svg { width: 18px; height: 18px; }
+main { padding: 16px 20px 32px; }
+footer { color: var(--muted); font-size: 12.5px; padding: 0 20px 28px; display: flex;
+  flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; }
+footer .lnk, footer a { color: var(--accent); }
+dialog { width: min(720px, calc(100vw - 24px)); max-height: calc(100vh - 48px); padding: 0;
+  border: 1px solid var(--line); border-radius: 4px; background: var(--panel);
+  color: var(--fg); }
+dialog::backdrop { background: rgb(0 0 0 / 45%); }
+dialog .head { display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; padding: 12px 18px; background: var(--head);
+  border-bottom: 1px solid var(--line); }
+dialog .body { padding: 4px 18px 18px; }
+dialog h2 { font-size: 15px; margin: 0; }
+dialog h3 { font-size: 13px; margin: 16px 0 4px; }
+dialog p, dialog ul { margin: 4px 0; }
+dialog ul { padding-left: 18px; }
+dialog code { background: var(--band); padding: 0 4px; border-radius: 2px; }
+dialog table { margin-top: 6px; font-size: 13px; }
+dialog th { position: static; }
+dialog .fine { margin: 10px 0 0; color: var(--muted); font-size: 12.5px; }
+dialog a { color: var(--accent); }
+
+/* Controls */
+#q { width: 100%; max-width: 760px; font-size: 17px; padding: 10px 14px; border-radius: 4px;
+  border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+.bar { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: end; padding: 12px 0; }
+.bar label { display: flex; flex-direction: column; gap: 2px; font-size: 12px;
+  color: var(--muted); }
+.bar label.check { flex-direction: row; align-items: center; gap: 6px; padding-bottom: 6px;
+  color: var(--fg); font-size: 13px; }
+.bar input[type=search], .bar input[type=text], .bar select { padding: 5px 8px;
+  border: 1px solid var(--line); border-radius: 3px; background: var(--panel);
+  color: var(--fg); font-size: 14px; }
+input:focus-visible, select:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 1px; }
+input[type=checkbox] { accent-color: var(--accent); }
+.hint { color: var(--muted); font-size: 12.5px; padding-bottom: 10px; }
+.bar label select, .bar label input[type=search], .bar > .ghost { height: 33px; }
+.bar label select { max-width: 260px; }
+.qrow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+.qrow #q { flex: 1 1 320px; }
+.qrow .lnk { color: var(--accent); font-size: 12.5px; }
+#active { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+#active button { padding: 1px 7px; border: 1px solid var(--line); border-radius: 3px;
+  background: var(--panel); color: var(--fg); cursor: pointer; font-size: 12.5px; }
+#active button:hover { border-color: var(--accent); }
+#active button::after { content: " \00D7"; color: var(--muted); }
+
+/* Result summary: two figures and a small chart */
+.summary { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px 12px;
+  margin-bottom: 12px; }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
+  padding: 10px 16px; min-width: 150px; box-shadow: var(--shadow); }
+.stat .k { font-size: 12px; color: var(--muted); }
+.sumline { flex: 1 1 100%; }
+.sumline .v { font-variant-numeric: tabular-nums; font-size: 15px; }
+.sumline .x { font-size: 12.5px; color: var(--muted); }
+.stat.wide { flex: 1; min-width: 280px; display: flex; flex-direction: column; }
+.chart { display: flex; align-items: stretch; gap: 3px; height: 62px; margin-top: 4px; }
+.col { flex: 1 1 0; max-width: 64px; min-width: 0; display: flex; flex-direction: column;
+  padding: 0; border: 0; background: none; cursor: default; }
+button.col { cursor: pointer; }
+.col .a { flex: 1; display: flex; align-items: flex-end;
+  border-bottom: 1px solid var(--line); }
+.col .b { width: 100%; background: var(--accent); border-radius: 1px 1px 0 0; }
+.col .b.pos { background: var(--pos); }
+button.col:hover .b { opacity: 0.7; }
+.col .l { font-size: 10.5px; line-height: 15px; color: var(--muted); text-align: center;
+  overflow: hidden; }
+
+/* Tables */
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
+  overflow: clip; box-shadow: var(--shadow); }
+.card.scroll { overflow: auto; max-height: max(320px, calc(100vh - 190px)); }
+table { border-collapse: separate; border-spacing: 0; width: 100%; }
+th, td { padding: 6px 10px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--line); }
+tbody tr:last-child > td { border-bottom: 0; }
+th { position: sticky; top: 0; background: var(--head); font-weight: 600; white-space: nowrap;
+  z-index: 2; font-size: 12.5px; color: var(--muted); }
+th.sort { cursor: pointer; user-select: none; }
+th.sort:hover { color: var(--fg); }
+th[aria-sort] { color: var(--accent); }
+th[aria-sort="ascending"]::after { content: " \25B2"; font-size: 9px; }
+th[aria-sort="descending"]::after { content: " \25BC"; font-size: 9px; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.d { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pos { color: var(--pos); }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+mark { background: var(--mark); color: inherit; border-radius: 2px; padding: 0 1px; }
+.tag { display: inline-block; font-size: 11.5px; padding: 0 6px; border: 1px solid var(--line);
+  border-radius: 3px; color: var(--muted); margin-left: 4px; }
+.lnk { padding: 0; border: 0; background: none; color: inherit; cursor: pointer;
+  text-align: left; }
+.lnk:hover { color: var(--accent); text-decoration: underline; }
+tbody tr.alt { background: var(--zebra); }
+th.sort:focus-visible, tr.row:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+#results tbody tr.row { cursor: pointer; }
+#results tbody tr.row:hover, #results tbody tr.row.open { background: var(--band); }
+.chev { display: inline-block; width: 6px; height: 6px; margin: 0 10px 2px 2px;
+  border: solid var(--muted); border-width: 0 1.5px 1.5px 0; transform: rotate(-45deg);
+  transition: transform 0.12s; }
+tr.open .chev { transform: rotate(45deg); border-color: var(--accent); }
+.plus { color: var(--muted); font-size: 12px; white-space: nowrap; margin-left: 4px; }
+tr.detail > td { background: var(--band); padding: 4px 12px 14px 34px; }
+tr.detail table { width: auto; min-width: 50%; margin-top: 8px; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 3px; overflow: clip; }
+tr.detail th { position: static; }
+tr.detail tr.this td { background: var(--hit); }
+tr.detail .go { margin-right: 14px; color: var(--accent); }
+.more { margin: 14px 8px 0 0; }
+
+/* Category totals */
+#pivot th:first-child, #pivot td:first-child { position: sticky; left: 0;
+  background: var(--panel); z-index: 1; white-space: nowrap;
+  border-right: 1px solid var(--line); }
+#pivot tr.alt td:first-child { background: var(--zebra); }
+#pivot th:first-child { background: var(--head); z-index: 3; }
+#pivot td.n { cursor: pointer; }
+#pivot td.n:hover { box-shadow: inset 0 0 0 2px var(--accent); }
+#pivot td.n:empty { cursor: default; box-shadow: none; }
+#pivot .tw { display: inline-block; width: 18px; padding: 0; border: 0; background: none;
+  cursor: pointer; color: var(--muted); }
+#pivot .tw .chev { margin: 0 0 2px 2px; }
+#pivot .tw.open .chev { transform: rotate(45deg); border-color: var(--accent); }
+#pivot tr.parent td:first-child, #pivot tr.parent td.sum { font-weight: 600; }
+#accts td:first-child .lnk:hover { color: var(--accent); }
+#pivot td.sum, #pivot th.sum { font-weight: 600; }
+#pivot td.tr, #pivot th.tr { border-right: 1px solid var(--line); vertical-align: middle; }
+.spark { display: block; }
+.spark .sn { fill: var(--accent); }
+.spark .sp { fill: var(--pos); }
+#pivot tr.total td { position: sticky; bottom: 0; background: var(--head); font-weight: 700;
+  border-top: 1px solid var(--line); cursor: default; box-shadow: none; z-index: 1; }
+#pivot tr.total td:first-child { z-index: 3; }
+
+/* Phones: each result becomes a small block instead of a table row. */
+@media (max-width: 720px) {
+  header.top { padding: 10px 12px; }
+  main { padding: 12px 12px 28px; }
+  .stat { flex: 1; min-width: 130px; }
+  #results > thead { display: none; }
+  #results, #results > tbody { display: block; }
+  #results tr.row { display: grid; grid-template-columns: 1fr auto; gap: 1px 12px;
+    padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  #results tr.row > td { border: 0; padding: 0; }
+  #results tr.row > td:empty { display: none; }
+  #results td.d { grid-area: 1 / 1; color: var(--muted); font-size: 12px; }
+  #results tr.row > td.n { grid-area: 1 / 2 / span 3; font-weight: 600; }
+  #results tr.row > td.n .small { font-weight: 400; }
+  #results td.c-payee { grid-column: 1; font-weight: 600; }
+  #results td.c-acct { grid-column: 1; color: var(--muted); font-size: 12px; }
+  #results td.c-cat, #results td.c-memo { grid-column: 1 / -1; }
+  #results tr.detail, #results tr.detail > td { display: block; }
+  tr.detail > td { padding: 4px 12px 12px; }
+  tr.detail table { width: 100%; }
+  #pivot td:first-child { max-width: 45vw; overflow: hidden; text-overflow: ellipsis; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg class="logo" viewBox="0 0 24 24" aria-hidden="true">
+      <rect width="24" height="24" rx="3" style="fill: var(--logo)"/>
+      <path d="M6 18v-5h3v5zM10.5 18V6h3v12zM15 18v-8h3v8z" fill="#fff"/>
+    </svg>
+    <div>
+      <h1 id="title">Transaction History</h1>
+      <div class="sub" id="summary"></div>
+    </div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-search" aria-selected="true">Search</button>
+    <button role="tab" id="tab-totals" aria-selected="false">Category totals</button>
+    <button role="tab" id="tab-accounts" aria-selected="false">Accounts</button>
+  </nav>
+  <button class="ghost" id="neg" type="button"></button>
+  <button class="ghost" id="theme" type="button"></button>
+</header>
+
+<main>
+<section id="view-search">
+  <div class="qrow">
+    <input type="search" id="q" autofocus
+      placeholder="Search payee, memo, category, account, date, or amount (eg: furnace)"
+      aria-label="Search payee, memo, category, account, date, or amount">
+    <button class="lnk" id="tips" type="button">Search tips</button>
+  </div>
+  <div class="bar">
+    <label>From <select id="y1"></select></label>
+    <label>To <select id="y2"></select></label>
+    <label>Account <select id="acct"></select></label>
+    <label>Category
+      <input type="search" id="cat" list="catlist" placeholder="any" size="26"
+        title="A category and its subcategories. Start with = for that category only."></label>
+    <datalist id="catlist"></datalist>
+    <label class="check" title="Uncheck to hide brokerage and retirement accounts. Their amounts have no sign in the export, so they distort the Total."><input type="checkbox" id="s-inv" checked> Include investment accounts</label>
+    <label class="check" title="Uncheck to hide money moved between your own accounts, eg: a credit card payment or a deposit to savings."><input type="checkbox" id="s-xfer" checked> Include transfers</label>
+    <button class="ghost" id="reset" type="button">Reset</button>
+  </div>
+  <div class="hint" id="active" hidden></div>
+  <div class="summary" id="sumbox"></div>
+  <div class="card">
+    <table id="results">
+      <thead><tr>
+        <th tabindex="0" class="sort" data-sort="date">Date</th>
+        <th tabindex="0" class="sort" data-sort="account">Account</th>
+        <th tabindex="0" class="sort" data-sort="payee">Payee</th>
+        <th tabindex="0" class="sort" data-sort="category">Category</th>
+        <th>Memo</th>
+        <th tabindex="0" class="sort n" data-sort="amount">Amount</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <button class="ghost more" id="more" type="button" hidden>Show more</button>
+  <button class="ghost more" id="all" type="button" hidden>Show all</button>
+</section>
+
+<section id="view-totals" hidden>
+  <div class="bar">
+    <label>Category contains
+      <input type="search" id="pf" placeholder="eg: insurance"></label>
+    <label class="check" title="Check to add brokerage and retirement accounts to the totals. Their amounts have no sign in the export, so a buy and a sell can both be positive."><input type="checkbox" id="p-inv"> Include investment accounts</label>
+    <button class="ghost" id="p-expand" type="button">Expand all</button>
+    <button class="ghost" id="p-collapse" type="button">Collapse all</button>
+  </div>
+  <div class="hint" id="pstatus"></div>
+  <div class="card scroll" id="pwrap">
+    <table id="pivot"><thead></thead><tbody></tbody></table>
+  </div>
+</section>
+
+<section id="view-accounts" hidden>
+  <div class="hint">Click an account to see its transactions. Click a column heading to sort.</div>
+  <div class="card scroll">
+    <table id="accts"><thead><tr>
+      <th tabindex="0" class="sort" data-k="0">Account</th>
+      <th tabindex="0" class="sort" data-k="1">Kind</th>
+      <th tabindex="0" class="sort n" data-k="2">Transactions</th>
+      <th tabindex="0" class="sort" data-k="3">First</th>
+      <th tabindex="0" class="sort" data-k="4">Last</th>
+    </tr></thead><tbody></tbody></table>
+  </div>
+</section>
+</main>
+<footer><button class="lnk" id="about-open" type="button">About this page</button>
+  <span>Generated by <a href="https://github.com/c0nsumer/quicken-to-html" target="_blank"
+  rel="noopener">c0nsumer/quicken-to-html</a><span id="ver"></span></span></footer>
+<dialog id="about">
+  <div class="head"><h2>About this page</h2>
+    <button class="ghost" id="about-close" type="button">Close</button></div>
+  <div class="body" id="about-body"></div>
+</dialog>
+
+<script>
+"use strict";
+const D = /*__DATA__*/null;
+const NONE = "(uncategorized)";
+const PAGE = 300;  // rows shown at first, and added by each "Show more"
+const THEME_KEY = "quicken-to-html-theme";
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
+  "Dec"];
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+// Negative amounts show as -1.00, or as (1.00) when the page's toggle is on.
+let parens = false;
+const money = (cents) => {
+  const s = (Math.abs(cents) / 100).toLocaleString("en-US",
+    { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return cents < 0 ? (parens ? `(${s})` : "-" + s) : s;
+};
+// For table cells: with parentheses on, other amounts get a blank the width of
+// a ")" so the digits stay lined up.
+const amt = (cents) => money(cents) + (parens && cents >= 0 ? '<span class="pp"></span>' : "");
+const moneyCell = (cents) =>
+  `<td class="n${cents > 0 ? " pos" : ""}">${amt(cents)}</td>`;
+const iso = (n) => {
+  const s = String(n);
+  return `${s.slice(0, 4)}-${s.slice(4, 6)}-${s.slice(6, 8)}`;
+};
+const text = new Intl.Collator(undefined, { sensitivity: "base", numeric: true });
+
+// Transaction fields, by position in each D.tx entry.
+const T_DATE = 0, T_ACCT = 1, T_PAYEE = 2, T_MEMO = 3, T_NUM = 4, T_CLR = 5, T_AMT = 6,
+  T_DETAIL = 7, T_LINES = 8;
+
+// One entry per category line. A transaction with no split has one line.
+const lines = [];
+const isXfer = D.cats.map((c) => c.startsWith("["));
+const isInvest = D.accounts.map((a) => a[1] === "Investment");
+D.tx.forEach((tx, t) => {
+  const flat = tx[T_LINES];
+  const acct = D.accounts[tx[T_ACCT]][0];
+  const head = [acct, D.payees[tx[T_PAYEE]], tx[T_MEMO], tx[T_NUM], tx[T_DETAIL]].join("\n");
+  for (let i = 0; i < flat.length; i += 4) {
+    const cents = flat[i + 3];
+    lines.push({
+      t, cat: flat[i], tag: flat[i + 1], memo: flat[i + 2], cents,
+      n: flat.length / 4,
+      hay: (head + "\n" + (D.cats[flat[i]] || NONE) + "\n" + D.tags[flat[i + 1]] + "\n" +
+        flat[i + 2]).toLowerCase(),
+    });
+  }
+});
+// Every year from the first transaction to the last, including a year with none.
+const years = [];
+for (let y = Math.floor(D.tx[0][T_DATE] / 10000); y <= Math.floor(D.tx[D.tx.length - 1][T_DATE] / 10000); y++) years.push(y);
+const firstYear = years[0], lastYear = years[years.length - 1];
+
+
+// ---- Header ---------------------------------------------------------------
+$("summary").textContent =
+  `${D.tx.length.toLocaleString()} transactions in ${D.accounts.length} accounts, ` +
+  `${iso(D.tx[0][T_DATE])} to ${iso(D.tx[D.tx.length - 1][T_DATE])}`;
+if (D.accent) {
+  document.documentElement.style.setProperty("--base", D.accent);
+  document.querySelector('link[rel="icon"]').href = "data:image/svg+xml," + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" ' +
+    `rx="3" fill="${D.accent}"/><path d="M6 18v-5h3v5zM10.5 18V6h3v12zM15 18v-8h3v8z" ` +
+    'fill="#fff"/></svg>');
+}
+if (D.version) $("ver").textContent = " v" + D.version;
+const title = D.title || "Transaction History";
+document.title = title;
+$("title").textContent = title;
+
+// ---- About ----------------------------------------------------------------
+function aboutHtml() {
+  const list = (items) => `<ul>${items.map((s) => `<li>${s}</li>`).join("")}</ul>`;
+  return `<p class="fine">Generated by <a href="https://github.com/c0nsumer/quicken-to-html" ` +
+    `target="_blank" rel="noopener">quicken-to-html</a>${D.version ? " v" + esc(D.version) : ""}. Quicken is a trademark of Quicken Inc. ` +
+    `This tool is not affiliated with or endorsed by Quicken Inc.</p>
+    <h3>This file</h3>
+    <p>${D.tx.length.toLocaleString()} transactions in ${D.accounts.length} accounts, from
+    ${iso(D.tx[0][T_DATE])} to ${iso(D.tx[D.tx.length - 1][T_DATE])}. Generated ${esc(D.built)}
+    from ${esc(D.source)}.</p>
+    ${D.notes.map((note) => `<p>${esc(note)}</p>`).join("")}
+    <h3>Searching</h3>` + list([
+      "Every word must match. Words can match in any order.",
+      "Words match payee, memo, category, tag, account, check number, and investment details.",
+      "Double quotes search for a whole phrase, eg: <code>\"furnace filters\"</code>.",
+      "A date matches from its start, with dates in YYYY-MM-DD format: <code>2016</code>, <code>2016-03</code>, or " +
+        "<code>2016-03-14</code>.",
+      "A number also matches amounts: <code>429</code> matches 429.00 to 429.99, and " +
+        "<code>429.40</code> matches exactly. Add a minus sign or parentheses to match only " +
+        "money going out.",
+      "In the Category box, a name matches that category and its subcategories. Start with " +
+        "<code>=</code> to match that category only.",
+      "Click a row to see the whole transaction. Click a column heading to sort.",
+      "Press <code>/</code> to jump to the search box.",
+      "The address changes with each view, so the Back button and bookmarks work.",
+      "Uncheck <b>Include transfers</b> to hide money moved between your own accounts, eg: a " +
+        "credit card payment. A transfer is not spending, and it appears once in each account.",
+      "Uncheck <b>Include investment accounts</b> to hide brokerage and retirement accounts. " +
+        "Their amounts have no sign in the export, so they distort the Total.",
+    ]) + "<h3>Category totals</h3>" + list([
+      "Transfers between accounts are not shown.",
+      "Investment accounts are not shown unless <b>Include investment accounts</b> is checked. Their amounts have no sign " +
+        "in the export, so a buy and a sell can both be positive.",
+      "A category with subcategories shows the total of all of them. Click its arrow to " +
+        "open it.",
+      "Click a category for all of its transactions, or an amount for that year only.",
+    ]);
+}
+$("tips").addEventListener("click", () => $("about-open").click());
+$("about-open").addEventListener("click", () => {
+  $("about-body").innerHTML = aboutHtml();
+  $("about").showModal();
+  $("about").scrollTop = 0;
+});
+$("about-close").addEventListener("click", () => $("about").close());
+$("about").addEventListener("click", (e) => { if (e.target === $("about")) $("about").close(); });
+
+// Icons for the theme button: half circle (follow the device), sun, and moon.
+const icon = (inner) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+  `stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
+const THEME_ICON = {
+  auto: icon('<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" ' +
+    'fill="currentColor"/>'),
+  light: icon('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2' +
+    'M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
+  dark: icon('<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>'),
+};
+function setTheme(value, save) {
+  if (value !== "light" && value !== "dark") value = "auto";
+  if (value === "auto") delete document.documentElement.dataset.theme;
+  else document.documentElement.dataset.theme = value;
+  const label = `Theme: ${value}. Click to change.`;
+  $("theme").innerHTML = THEME_ICON[value];
+  $("theme").title = label;
+  $("theme").setAttribute("aria-label", label);
+  if (save) try { localStorage.setItem(THEME_KEY, value); } catch (e) { /* not saved */ }
+}
+$("theme").addEventListener("click", () => {
+  const now = document.documentElement.dataset.theme || "auto";
+  setTheme({ auto: "light", light: "dark", dark: "auto" }[now], true);
+});
+setTheme(document.documentElement.dataset.theme, false);
+
+const NEG_KEY = "quicken-to-html-negatives";
+function setParens(on, save) {
+  parens = Boolean(on);
+  const label = `Negative amounts show ${parens ? "in parentheses" : "with a minus sign"}. ` +
+    "Click to change.";
+  $("neg").textContent = parens ? "(1.00)" : "-1.00";
+  $("neg").title = label;
+  $("neg").setAttribute("aria-label", label);
+  if (save) {
+    try { localStorage.setItem(NEG_KEY, parens ? "parens" : "minus"); } catch (e) { /* not saved */ }
+  }
+}
+$("neg").addEventListener("click", () => {
+  setParens(!parens, true);
+  render();
+  if (tab === "totals") renderPivot();
+});
+let savedParens = false;
+try { savedParens = localStorage.getItem(NEG_KEY) === "parens"; } catch (e) { /* default */ }
+setParens(savedParens, false);
+
+// ---- Search view ----------------------------------------------------------
+const state = { sort: "date", dir: -1, shown: 300, hits: [], open: new Set(), sum: 0,
+  count: 0 };
+let tab = "search";
+let markRe = null;
+
+function fillControls() {
+  const opts = years.map((y) => `<option>${y}</option>`).join("");
+  $("y1").innerHTML = opts;
+  $("y2").innerHTML = opts;
+  const kinds = [...new Set(D.accounts.map((a) => a[1]))];
+  let html = '<option value="">All accounts</option>';
+  for (const kind of kinds) {
+    html += `<optgroup label="${esc(kind)}"><option value="k:${esc(kind)}">All ${esc(kind)}` +
+      "</option>";
+    D.accounts.forEach((a, i) => {
+      if (a[1] === kind) html += `<option value="${i}">${esc(a[0])}</option>`;
+    });
+    html += "</optgroup>";
+  }
+  $("acct").innerHTML = html;
+  const names = D.cats.filter((c) => c && !c.startsWith("[")).sort((a, b) =>
+    a.localeCompare(b));
+  $("catlist").innerHTML = names.map((c) => `<option value="${esc(c)}">`).join("");
+}
+
+function tokens(str) {
+  const out = [];
+  // A quote with no partner yet (while typing) is ignored.
+  for (const m of str.toLowerCase().matchAll(/"([^"]+)"|(\S+)/g)) {
+    const word = m[1] || m[2].replace(/"/g, "");
+    if (word) out.push(word);
+  }
+  return out;
+}
+
+// Every search word is looked for in the text fields. A word that looks like a
+// date (2016, 2016-03, 2016-03-14) also matches the start of the date. A word
+// that looks like an amount also matches the amount: 429 matches 429.00 to
+// 429.99, 429.4 matches 429.40 to 429.49, and 429.40 matches exactly. Without a
+// minus sign or parentheses it matches money in or out.
+function matcher(word) {
+  const m = { word, date: /^\d{4}(-\d{0,2}(-\d{0,2})?)?$/.test(word), lo: -1, hi: -1,
+    neg: false };
+  const a = /^(-|\()?\$?(\d[\d,]*)?(?:\.(\d{0,2}))?\)?$/.exec(word);
+  if (a && (a[2] || a[3])) {
+    const frac = a[3] || "";
+    m.lo = +(a[2] || "0").replace(/,/g, "") * 100 + +frac.padEnd(2, "0");
+    m.hi = m.lo + (frac.length === 2 ? 0 : frac.length === 1 ? 9 : 99);
+    m.neg = Boolean(a[1]);
+  }
+  return m;
+}
+function amountHit(m, cents) {
+  if (m.neg && cents >= 0) return false;
+  const abs = Math.abs(cents);
+  return abs >= m.lo && abs <= m.hi;
+}
+
+// Wraps the parts of a string that match the search words in <mark>.
+function hl(s) {
+  s = String(s);
+  if (!markRe || !s) return esc(s);
+  return s.split(markRe).map((part, i) =>
+    (i % 2 ? `<mark>${esc(part)}</mark>` : esc(part))).join("");
+}
+
+// Returns a test for a category index: exact name, or any subcategory of it.
+// If no category has that name, fall back to "name contains".
+function categoryTest(str) {
+  let want = str.trim().toLowerCase();
+  if (!want) return null;
+  const lower = D.cats.map((c) => (c || NONE).toLowerCase());
+  if (want.startsWith("=")) {  // "=Insurance" means that category only
+    want = want.slice(1);
+    return lower.map((c) => c === want);
+  }
+  let ok = lower.map((c) => c === want || c.startsWith(want + ":"));
+  if (!ok.some(Boolean)) ok = lower.map((c) => c.includes(want));
+  return ok;
+}
+
+const sortKey = {
+  account: (hit) => D.accounts[D.tx[hit.t][T_ACCT]][0],
+  payee: (hit) => D.payees[D.tx[hit.t][T_PAYEE]],
+  category: (hit) => D.cats[mainLine(hit).cat] || "",
+};
+
+// The matching line with the largest amount stands for the whole row.
+function mainLine(hit) {
+  let best = lines[hit.at[0]];
+  for (const i of hit.at) if (Math.abs(lines[i].cents) > Math.abs(best.cents)) best = lines[i];
+  return best;
+}
+
+function runSearch() {
+  const words = tokens($("q").value);
+  const tests = words.map(matcher);
+  markRe = words.length ? new RegExp("(" + [...words].sort((a, b) => b.length - a.length)
+    .map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")", "gi") : null;
+  const y1 = +$("y1").value * 10000, y2 = +$("y2").value * 10000 + 9999;
+  const acct = $("acct").value;
+  const kind = acct.startsWith("k:") ? acct.slice(2) : null;
+  const acctIx = acct && !kind ? +acct : -1;
+  const catOk = categoryTest($("cat").value);
+  const withInv = $("s-inv").checked, withXfer = $("s-xfer").checked;
+  // One hit per transaction, holding the lines of it that match.
+  const hits = [];
+  let sum = 0, count = 0, last = null;
+  for (let i = 0; i < lines.length; i++) {
+    const ln = lines[i], tx = D.tx[ln.t];
+    if (tx[T_DATE] < y1 || tx[T_DATE] > y2) continue;
+    if (acctIx >= 0 && tx[T_ACCT] !== acctIx) continue;
+    if (kind && D.accounts[tx[T_ACCT]][1] !== kind) continue;
+    if (!withInv && isInvest[tx[T_ACCT]]) continue;
+    if (!withXfer && isXfer[ln.cat]) continue;
+    if (catOk && !catOk[ln.cat]) continue;
+    let all = true;
+    for (const m of tests) {
+      if (ln.hay.includes(m.word)) continue;
+      if (m.date && iso(tx[T_DATE]).startsWith(m.word)) continue;
+      if (m.lo >= 0 && (amountHit(m, ln.cents) || amountHit(m, tx[T_AMT]))) continue;
+      all = false;
+      break;
+    }
+    if (!all) continue;
+    if (!last || last.t !== ln.t) hits.push((last = { t: ln.t, at: [], cents: 0 }));
+    last.at.push(i);
+    last.cents += ln.cents;
+    sum += ln.cents;
+    count++;
+  }
+  // Hits start in date order. Ties in any other order fall back to newest first.
+  const { sort, dir } = state;
+  if (sort === "amount") {
+    hits.sort((a, b) => (a.cents - b.cents) * dir || b.t - a.t);
+  } else if (sortKey[sort]) {
+    const key = sortKey[sort];
+    for (const hit of hits) hit.k = key(hit);
+    hits.sort((a, b) => text.compare(a.k, b.k) * dir || b.t - a.t);
+  } else if (dir < 0) {
+    hits.reverse();
+  }
+  state.hits = hits;
+  state.sum = sum;
+  state.count = count;
+  state.shown = PAGE;
+  state.open.clear();
+  render();
+}
+
+const uniq = (list) => [...new Set(list.filter(Boolean))];
+
+function rowHtml(hit, i) {
+  const tx = D.tx[hit.t];
+  const matched = hit.at.map((i) => lines[i]);
+  const total = matched[0].n;
+  // One category per row. A split shows its largest matching line and counts the rest.
+  const ln = mainLine(hit);
+  const cat = (D.cats[ln.cat] ? hl(D.cats[ln.cat]) : `<span class="muted">${NONE}</span>`) +
+    (D.tags[ln.tag] ? `<span class="tag">${hl(D.tags[ln.tag])}</span>` : "") +
+    (total > 1 ? ` <span class="plus" title="Split into ${total} lines, total ` +
+      `${money(tx[T_AMT])}. Click the row to see them.">+${total - 1} more</span>` : "");
+  const memos = [];
+  const own = uniq(matched.map((ln) => ln.memo));
+  if (own.length && own.length <= 4) memos.push(hl(own.join("; ")));
+  if (tx[T_MEMO] && !(own.length === 1 && own[0] === tx[T_MEMO])) {
+    memos.push(`<span class="muted">${hl(tx[T_MEMO])}</span>`);
+  }
+  if (tx[T_DETAIL]) memos.push(`<span class="muted">${hl(tx[T_DETAIL])}</span>`);
+  // When only some lines of a split match, the amount is part of the transaction.
+  const part = hit.cents !== tx[T_AMT] && total > 1
+    ? `<span class="plus">part of ${money(tx[T_AMT])}</span> &nbsp;` : "";
+  const open = state.open.has(hit.t);
+  let html = `<tr class="row${i % 2 ? " alt" : ""}${open ? " open" : ""}" data-t="${hit.t}" ` +
+    `tabindex="0" aria-expanded="${open ? "true" : "false"}">` +
+    `<td class="d"><span class="chev"></span>${iso(tx[T_DATE])}</td>` +
+    `<td class="c-acct">${hl(D.accounts[tx[T_ACCT]][0])}</td>` +
+    `<td class="c-payee">${hl(D.payees[tx[T_PAYEE]])}</td>` +
+    `<td class="c-cat">${cat}</td><td class="c-memo">${memos.join(' <span class="muted">&middot;</span> ')}</td>` +
+    `<td class="n${hit.cents > 0 ? " pos" : ""}">${part}${amt(hit.cents)}</td></tr>`;
+  if (open) html += detailHtml(hit);
+  return html;
+}
+
+function detailHtml(hit) {
+  const tx = D.tx[hit.t];
+  const facts = [];
+  if (tx[T_NUM]) facts.push("Num: " + esc(tx[T_NUM]));
+  // The total is only worth saying when the row shows part of the transaction.
+  if (hit.cents !== tx[T_AMT]) facts.push("Whole transaction: " + money(tx[T_AMT]));
+  const payee = D.payees[tx[T_PAYEE]];
+  // In column order: account, payee, then category.
+  const jump = `<button class="lnk go" data-go="acct">Show everything in ` +
+    `${esc(D.accounts[tx[T_ACCT]][0])}</button>` +
+    (payee ? `<button class="lnk go" data-go="payee">Show everything from ` +
+    `${esc(payee)}</button>` : "");
+  const matched = new Set(hit.at);
+  let first = hit.at[0];
+  while (first > 0 && lines[first - 1].t === hit.t) first--;
+  const mark = matched.size < lines[first].n;
+  if (lines[first].n === 1) {
+    // Not a split: the row above already says it all, so only the links are left.
+    const name = D.cats[lines[first].cat];
+    const more = name ? `<button class="lnk go" data-go="cat" data-c="${esc(name)}">` +
+      `Show everything in ${esc(name)}</button>` : "";
+    return `<tr class="detail" data-t="${hit.t}"><td colspan="6">` +
+      (facts.length ? `<div class="small">${facts.join(" &middot; ")}</div>` : "") +
+      `<div class="small">${jump}${more}</div></td></tr>`;
+  }
+  let rows = "";
+  for (let j = first; j < lines.length && lines[j].t === hit.t; j++) {
+    const s = lines[j];
+    const name = D.cats[s.cat] || NONE;
+    rows += `<tr${mark && matched.has(j) ? ' class="this"' : ""}>` +
+      `<td><button class="lnk" data-go="cat" data-c="${esc(name)}" ` +
+      `title="Show everything in this category">${esc(name)}</button></td>` +
+      `<td>${esc(D.tags[s.tag])}</td><td>${esc(s.memo)}</td>${moneyCell(s.cents)}</tr>`;
+  }
+  return `<tr class="detail" data-t="${hit.t}"><td colspan="6">` +
+    (facts.length ? `<div class="small">${facts.join(" &middot; ")}</div>` : "") +
+    `<table><thead><tr><th>Category</th><th>Tag</th><th>Memo</th><th class="n">Amount` +
+    `</th></tr></thead><tbody>${rows}</tbody></table>` +
+    `<div class="small" style="margin-top:8px">${jump}</div></td></tr>`;
+}
+
+// Two figures and a bar per year. If one year is selected, a bar per month.
+function summaryHtml() {
+  const { hits } = state;
+  if (!hits.length) {
+    // A date typed with slashes is the likeliest reason for an empty result.
+    const why = /\d\/\d/.test($("q").value) ? " Dates are typed like 2024-03-15." : "";
+    const on = $("active").hidden ? "" : " Check the filters listed above.";
+    return `<div class="sumline"><b class="v">0</b> transactions. ` +
+      `<span class="x">Nothing matches.${why}${on}</span></div>`;
+  }
+  const y1 = +$("y1").value, y2 = +$("y2").value;
+  const byMonth = y1 === y2;
+  const sums = new Map();
+  for (const hit of hits) {
+    const date = D.tx[hit.t][T_DATE];
+    const key = byMonth ? Math.floor(date / 100) % 100 : Math.floor(date / 10000);
+    sums.set(key, (sums.get(key) || 0) + hit.cents);
+  }
+  const keys = [];
+  if (byMonth) for (let m = 1; m <= 12; m++) keys.push(m);
+  else for (let y = y1; y <= y2; y++) keys.push(y);
+  const max = Math.max(1, ...[...sums.values()].map(Math.abs));
+  const short = keys.length > 10;
+  let cols = "";
+  for (const key of keys) {
+    const v = sums.get(key);
+    // On a narrow screen with many years, only every fifth year has room for a label.
+    const thin = short && keys.length > 12 && window.innerWidth < 720 && key % 5;
+    const label = byMonth ? MONTHS[key - 1] : thin ? "&nbsp;"
+      : short ? "'" + String(key).slice(2) : key;
+    const name = byMonth ? `${MONTHS[key - 1]} ${y1}` : key;
+    const bar = v ? `<span class="b${v > 0 ? " pos" : ""}" style="height:` +
+      `${Math.max(3, Math.round(Math.abs(v) / max * 100))}%"></span>` : "";
+    const tip = `${name}: ${v === undefined ? "nothing" : money(v)}`;
+    cols += byMonth
+      ? `<div class="col" data-tip="${tip}"><span class="a">${bar}</span>` +
+        `<span class="l">${label}</span></div>`
+      : `<button class="col" type="button" data-y="${key}" data-tip="${tip}" aria-label="${tip}">` +
+        `<span class="a">${bar}</span><span class="l">${label}</span></button>`;
+  }
+  const what = byMonth ? `By month, ${y1}` : "By year (click a bar to see that year)";
+  // Transfers and investment accounts make the total less meaningful, so say they are in it.
+  const extra = [];
+  if ($("s-xfer").checked) extra.push("transfers");
+  if ($("s-inv").checked && isInvest.some(Boolean)) extra.push("investments");
+  const mixed = extra.length ? `, with ${extra.join(" and ")}` : "";
+  return `<div class="sumline"><b class="v">${hits.length.toLocaleString()}</b> ` +
+    `transaction${hits.length === 1 ? "" : "s"} ` +
+    `<span class="x">(${state.count.toLocaleString()} category lines)</span> &middot; Total ` +
+    `<b class="v${state.sum > 0 ? " pos" : ""}">${money(state.sum)}</b> ` +
+    `<span class="x">${byMonth ? y1 : y1 + " to " + y2}${mixed}</span></div>` +
+    `<div class="stat wide"><div class="k" id="tip" data-idle="${what}">${what}</div>` +
+    `<div class="chart" id="chart">${cols}</div></div>`;
+}
+
+// The filters that are on, each as a button that turns it off.
+function activeHtml() {
+  const out = [];
+  const add = (key, label) => out.push(`<button type="button" data-clear="${key}" ` +
+    `title="Remove this filter">${esc(label)}</button>`);
+  if ($("cat").value.trim()) add("cat", "Category: " + $("cat").value.trim());
+  if ($("acct").value) add("acct", "Account: " + $("acct").selectedOptions[0].textContent.trim());
+  const y1 = +$("y1").value, y2 = +$("y2").value;
+  if (y1 !== firstYear || y2 !== lastYear) add("years", y1 === y2 ? String(y1) : `${y1} to ${y2}`);
+  if (!$("s-xfer").checked) add("xfer", "Transfers hidden");
+  if (!$("s-inv").checked) add("inv", "Investment accounts hidden");
+  return out.length ? "Filters: " + out.join("") : "";
+}
+$("active").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-clear]");
+  if (!b) return;
+  const key = b.dataset.clear;
+  if (key === "cat") $("cat").value = "";
+  else if (key === "acct") $("acct").value = "";
+  else if (key === "years") { $("y1").value = firstYear; $("y2").value = lastYear; }
+  else if (key === "xfer") $("s-xfer").checked = true;
+  else $("s-inv").checked = true;
+  changed();
+});
+
+function render() {
+  const { hits } = state;
+  $("active").innerHTML = activeHtml();
+  $("active").hidden = !$("active").innerHTML;
+  $("sumbox").innerHTML = summaryHtml();
+  $("results").tBodies[0].innerHTML = hits.slice(0, state.shown).map(rowHtml).join("");
+  const left = hits.length - state.shown;
+  $("more").hidden = left <= 0;
+  $("all").hidden = left <= PAGE;
+  $("all").textContent = `Show all ${hits.length.toLocaleString()}`;
+  $("more").textContent = `Show ${Math.min(PAGE, left).toLocaleString()} more ` +
+    `(${left.toLocaleString()} left)`;
+  for (const th of document.querySelectorAll("#results th.sort")) {
+    if (th.dataset.sort === state.sort) {
+      th.setAttribute("aria-sort", state.dir > 0 ? "ascending" : "descending");
+    } else {
+      th.removeAttribute("aria-sort");
+    }
+  }
+}
+
+// Sets the search controls, then shows the Search tab as a new history entry.
+function goSearch(o) {
+  $("q").value = o.q || "";
+  $("cat").value = o.cat || "";
+  $("acct").value = o.acct === undefined ? "" : o.acct;
+  $("y1").value = o.year || firstYear;
+  $("y2").value = o.year || lastYear;
+  $("s-inv").checked = o.inv !== false;
+  $("s-xfer").checked = o.xfer !== false;
+  state.sort = "date";
+  state.dir = -1;
+  show("search");
+  runSearch();
+  syncHash(true);
+}
+
+let timer = 0;
+const changed = () => { runSearch(); syncHash(false); };
+const later = () => { clearTimeout(timer); timer = setTimeout(changed, 120); };
+$("q").addEventListener("input", later);
+$("cat").addEventListener("input", later);
+// From cannot be later than To: the other menu follows the one just changed.
+$("y1").addEventListener("change", () => { if (+$("y1").value > +$("y2").value) $("y2").value = $("y1").value; });
+$("y2").addEventListener("change", () => { if (+$("y2").value < +$("y1").value) $("y1").value = $("y2").value; });
+for (const id of ["y1", "y2", "acct", "s-inv", "s-xfer"]) $(id).addEventListener("change", changed);
+// Rows are added below the ones already drawn, so the page does not jump.
+const showTo = (count) => {
+  const from = state.shown;
+  state.shown = Math.min(count, state.hits.length);
+  $("results").tBodies[0].insertAdjacentHTML("beforeend",
+    state.hits.slice(from, state.shown).map((hit, i) => rowHtml(hit, from + i)).join(""));
+  const left = state.hits.length - state.shown;
+  $("more").hidden = left <= 0;
+  $("all").hidden = left <= PAGE;
+  $("more").textContent = `Show ${Math.min(PAGE, left).toLocaleString()} more ` +
+    `(${left.toLocaleString()} left)`;
+};
+$("more").addEventListener("click", () => showTo(state.shown + PAGE));
+$("all").addEventListener("click", () => showTo(Infinity));
+$("reset").addEventListener("click", () => {
+  $("q").value = ""; $("cat").value = ""; $("acct").value = "";
+  $("y1").value = firstYear; $("y2").value = lastYear;
+  $("s-inv").checked = true; $("s-xfer").checked = true;
+  state.sort = "date"; state.dir = -1;
+  changed();
+  $("q").focus();
+});
+$("results").tHead.addEventListener("click", (e) => {
+  const th = e.target.closest("th.sort");
+  if (!th) return;
+  if (state.sort === th.dataset.sort) state.dir = -state.dir;
+  else { state.sort = th.dataset.sort; state.dir = state.sort === "date" ? -1 : 1; }
+  changed();
+});
+// Enter or Space on a focused column heading sorts by it.
+document.addEventListener("keydown", (e) => {
+  if ((e.key !== "Enter" && e.key !== " ") || !e.target.matches("th.sort")) return;
+  e.preventDefault();
+  e.target.click();
+});
+// Enter or Space on a focused row opens it, the same as a click.
+$("results").tBodies[0].addEventListener("keydown", (e) => {
+  if ((e.key !== "Enter" && e.key !== " ") || !e.target.matches("tr.row")) return;
+  e.preventDefault();
+  e.target.click();
+});
+$("results").tBodies[0].addEventListener("click", (e) => {
+  const go = e.target.closest("[data-go]");
+  if (go) {
+    const tx = D.tx[+go.closest("tr.detail").dataset.t];
+    if (go.dataset.go === "payee") {
+      // A quote inside the name cannot sit in a quoted phrase, so the name is cut there.
+      goSearch({ q: D.payees[tx[T_PAYEE]].split('"').map((part) => part.trim())
+        .filter(Boolean).map((part) => `"${part}"`).join(" ") });
+    } else if (go.dataset.go === "acct") {
+      goSearch({ acct: String(tx[T_ACCT]) });
+    } else {
+      goSearch({ cat: "=" + go.dataset.c });
+    }
+    return;
+  }
+  const tr = e.target.closest("tr.row");
+  if (!tr || window.getSelection().toString()) return;
+  const t = +tr.dataset.t;
+  if (state.open.has(t)) {
+    state.open.delete(t);
+    tr.nextElementSibling.remove();
+  } else {
+    state.open.add(t);
+    tr.insertAdjacentHTML("afterend", detailHtml(state.hits.find((hit) => hit.t === t)));
+  }
+  tr.classList.toggle("open", state.open.has(t));
+  tr.setAttribute("aria-expanded", String(state.open.has(t)));
+});
+$("sumbox").addEventListener("click", (e) => {
+  const col = e.target.closest("button.col");
+  if (!col) return;
+  $("y1").value = col.dataset.y;
+  $("y2").value = col.dataset.y;
+  runSearch();
+  syncHash(true);
+});
+$("sumbox").addEventListener("mouseover", (e) => {
+  const col = e.target.closest(".col");
+  const tip = $("tip");
+  if (tip) tip.textContent = col ? col.dataset.tip : tip.dataset.idle;
+});
+$("sumbox").addEventListener("mouseleave", () => {
+  const tip = $("tip");
+  if (tip) tip.textContent = tip.dataset.idle;
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey) return;
+  if (/^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName)) return;
+  e.preventDefault();
+  if (tab === "search") $("q").focus(); else if (tab === "totals") $("pf").focus();
+});
+
+// ---- Category totals view -------------------------------------------------
+const pv = { sort: "name", dir: 1 };
+
+// A small bar chart of one category row: one bar per year, newest first like the columns.
+function spark(row, max) {
+  const w = years.length > 16 ? 3 : years.length > 8 ? 5 : 8, high = 18;
+  let neg = "", pos = "";
+  [...years].reverse().forEach((y, i) => {
+    const v = row.get(y);
+    if (!v) return;
+    const h = Math.max(1.5, Math.abs(v) / max * high).toFixed(1);
+    const bar = `M${i * (w + 1)} ${high}v-${h}h${w}v${h}z`;
+    if (v > 0) pos += bar; else neg += bar;
+  });
+  return `<svg class="spark" width="${years.length * (w + 1) - 1}" height="${high}">` +
+    `<path class="sn" d="${neg}"/><path class="sp" d="${pos}"/></svg>`;
+}
+
+// Which parent categories are open. "all" means every one of them.
+pv.open = new Set();
+pv.all = false;
+let parents = [];  // names of the categories that have subcategories, from the last draw
+
+function renderPivot() {
+  const withInv = $("p-inv").checked;
+  const filter = $("pf").value.trim().toLowerCase();
+  const own = new Map(); // full category name -> Map(year -> cents)
+  for (const ln of lines) {
+    if (isXfer[ln.cat]) continue;
+    const tx = D.tx[ln.t];
+    if (!withInv && isInvest[tx[T_ACCT]]) continue;
+    const name = D.cats[ln.cat] || NONE;
+    if (filter && !name.toLowerCase().includes(filter)) continue;
+    const year = Math.floor(tx[T_DATE] / 10000);
+    let row = own.get(name);
+    if (!row) own.set(name, (row = new Map()));
+    row.set(year, (row.get(year) || 0) + ln.cents);
+  }
+  // With a filter, the matches are a flat list. Without one, they are a tree: a parent
+  // holds the total of everything under it.
+  const nodes = new Map();
+  const roots = [];
+  const node = (name) => {
+    let n = nodes.get(name);
+    if (n) return n;
+    const at = filter ? -1 : name.lastIndexOf(":");
+    n = { name, label: name.slice(at + 1), row: new Map(), kids: [], depth: 0, go: "=" + name };
+    nodes.set(name, n);
+    if (at < 0) roots.push(n);
+    else { const up = node(name.slice(0, at)); up.kids.push(n); n.depth = up.depth + 1; }
+    return n;
+  };
+  for (const [name, row] of own) {
+    for (let n = node(name), full = name; ; ) {
+      for (const [y, v] of row) n.row.set(y, (n.row.get(y) || 0) + v);
+      const at = filter ? -1 : full.lastIndexOf(":");
+      if (at < 0) break;
+      full = full.slice(0, at);
+      n = node(full);
+    }
+  }
+  parents = [];
+  for (const n of nodes.values()) {
+    n.total = 0; n.max = 1;
+    for (const v of n.row.values()) { n.total += v; n.max = Math.max(n.max, Math.abs(v)); }
+    if (!n.kids.length) continue;
+    parents.push(n.name);
+    n.go = n.name;  // a parent lists its subcategories too
+    // Lines filed under the parent itself get their own row beside the subcategories.
+    if (own.has(n.name)) {
+      const self = { name: n.name, label: "(no subcategory)", row: own.get(n.name), kids: [],
+        depth: n.depth + 1, go: "=" + n.name, total: 0, max: 1 };
+      for (const v of self.row.values()) { self.total += v; self.max = Math.max(self.max, Math.abs(v)); }
+      n.kids.push(self);
+    }
+  }
+  const cols = [...years].reverse();
+  // Sort by name, by the all-years total, or by one year. Empty cells go last.
+  const byYear = years.includes(+pv.sort) ? +pv.sort : 0;
+  if (pv.sort !== "all" && !byYear) pv.sort = "name";
+  const order = (a, b) => {
+    if (pv.sort === "name") return text.compare(a.label, b.label) * pv.dir;
+    const x = byYear ? a.row.get(byYear) : a.total;
+    const y = byYear ? b.row.get(byYear) : b.total;
+    if (x === undefined || y === undefined) {
+      return (x === undefined) - (y === undefined) || text.compare(a.label, b.label);
+    }
+    // By size, whether the money came in or went out.
+    return (Math.abs(x) - Math.abs(y)) * pv.dir || text.compare(a.label, b.label);
+  };
+  const aria = (k) => (String(pv.sort) === String(k)
+    ? ` aria-sort="${pv.dir > 0 ? "ascending" : "descending"}"` : "");
+  $("pivot").tHead.innerHTML =
+    `<tr><th tabindex="0" class="sort" data-k="name"${aria("name")}>Category</th>` +
+    `<th tabindex="0" class="sort n sum" data-k="all"${aria("all")}>All years</th>` +
+    `<th class="tr" title="One bar per year, newest to oldest, like the columns">Trend</th>` +
+    cols.map((y) => `<th tabindex="0" class="sort n" data-k="${y}"${aria(y)}>${y}</th>`).join("") + "</tr>";
+  let body = "";
+  let alt = false;
+  const draw = (list) => {
+    for (const n of list.sort(order)) {
+      let cells = "";
+      for (const y of cols) {
+        const v = n.row.get(y);
+        cells += v === undefined ? '<td class="n"></td>'
+          : `<td class="n${v > 0 ? " pos" : ""}" data-y="${y}">${amt(v)}</td>`;
+      }
+      const open = n.kids.length && (pv.all || pv.open.has(n.name));
+      const twist = n.kids.length
+        ? `<button class="tw${open ? " open" : ""}" type="button" data-tw="${esc(n.name)}" ` +
+          `aria-expanded="${open ? "true" : "false"}" title="Show or hide subcategories">` +
+          `<span class="chev"></span></button>`
+        : '<span class="tw"></span>';
+      body += `<tr class="${alt ? "alt" : ""}${n.kids.length ? " parent" : ""}" ` +
+        `data-c="${esc(n.go)}"><td style="padding-left:${10 + n.depth * 18}px">${twist}` +
+        `<button class="lnk" type="button" title="Show every transaction in this category">` +
+        `${esc(n.label)}</button></td>` +
+        `<td class="n sum${n.total > 0 ? " pos" : ""}" data-y="">${amt(n.total)}</td>` +
+        `<td class="tr">${spark(n.row, n.max)}</td>${cells}</tr>`;
+      alt = !alt;
+      if (open) draw(n.kids);
+    }
+  };
+  draw(roots);
+  let grand = 0;
+  let cells = "";
+  for (const y of cols) {
+    let v = 0;
+    for (const n of roots) v += n.row.get(y) || 0;
+    grand += v;
+    cells += `<td class="n">${amt(v)}</td>`;
+  }
+  body += `<tr class="total"><td>Net of shown</td><td class="n sum">${amt(grand)}</td>` +
+    `<td class="tr"></td>${cells}</tr>`;
+  $("pivot").tBodies[0].innerHTML = roots.length ? body
+    : '<tr><td colspan="99" class="muted">No categories match.</td></tr>';
+  $("p-expand").disabled = $("p-collapse").disabled = !parents.length;
+  $("pstatus").textContent = `${own.size.toLocaleString()} categories. Transfers between ` +
+    "accounts are not shown. Click a category for all of its transactions, or an amount for " +
+    "that year only. Click a column heading to sort.";
+}
+
+const pivotChanged = () => { renderPivot(); syncHash(false); };
+$("pf").addEventListener("input", pivotChanged);
+$("p-inv").addEventListener("change", pivotChanged);
+$("p-expand").addEventListener("click", () => { pv.all = true; pv.open.clear(); pivotChanged(); });
+$("p-collapse").addEventListener("click", () => { pv.all = false; pv.open.clear(); pivotChanged(); });
+$("pivot").tHead.addEventListener("click", (e) => {
+  const th = e.target.closest("th.sort");
+  if (!th) return;
+  if (String(pv.sort) === th.dataset.k) pv.dir = -pv.dir;
+  else { pv.sort = th.dataset.k; pv.dir = pv.sort === "name" ? 1 : -1; }  // largest first
+  pivotChanged();
+});
+$("pivot").tBodies[0].addEventListener("click", (e) => {
+  const tw = e.target.closest("[data-tw]");
+  if (tw) {
+    // Leaving "all open" turns it into the list of everything else that is open.
+    if (pv.all) { pv.open = new Set(parents); pv.all = false; }
+    const name = tw.dataset.tw;
+    if (!pv.open.delete(name)) pv.open.add(name);
+    pivotChanged();
+    // The table was redrawn, so put the keyboard focus back on the same arrow.
+    for (const b of $("pivot").querySelectorAll("[data-tw]")) if (b.dataset.tw === name) b.focus();
+    return;
+  }
+  const tr = e.target.closest("tr[data-c]");
+  if (!tr) return;
+  const td = e.target.closest("td[data-y]");
+  if (!td && !e.target.closest("button.lnk")) return;
+  goSearch({
+    cat: tr.dataset.c,
+    year: td ? td.dataset.y : "",
+    inv: $("p-inv").checked,
+    xfer: false,
+  });
+});
+
+// ---- Accounts view --------------------------------------------------------
+{
+  const per = D.accounts.map(() => ({ n: 0, first: 0, last: 0 }));
+  for (const tx of D.tx) {
+    const a = per[tx[T_ACCT]];
+    a.n++;
+    if (!a.first) a.first = tx[T_DATE];
+    a.last = tx[T_DATE];
+  }
+  const rows = D.accounts.map((a, i) => [a[0], a[1], per[i].n, per[i].first, per[i].last, i]);
+  const av = { k: 0, dir: 1 };
+  const draw = () => {
+    rows.sort((a, b) => (typeof a[av.k] === "number" ? a[av.k] - b[av.k]
+      : text.compare(a[av.k], b[av.k])) * av.dir || text.compare(a[0], b[0]));
+    $("accts").tBodies[0].innerHTML = rows.map((r, i) =>
+      `<tr${i % 2 ? ' class="alt"' : ""}><td><button class="lnk" type="button" ` +
+      `data-a="${r[5]}">${esc(r[0])}</button></td><td>${esc(r[1])}</td>` +
+      `<td class="n">${r[2].toLocaleString()}</td><td class="d">${iso(r[3])}</td>` +
+      `<td class="d">${iso(r[4])}</td></tr>`).join("");
+    for (const th of $("accts").tHead.rows[0].cells) {
+      if (+th.dataset.k === av.k) th.setAttribute("aria-sort", av.dir > 0 ? "ascending" : "descending");
+      else th.removeAttribute("aria-sort");
+    }
+  };
+  draw();
+  $("accts").tHead.addEventListener("click", (e) => {
+    const th = e.target.closest("th.sort");
+    if (!th) return;
+    if (+th.dataset.k === av.k) av.dir = -av.dir; else { av.k = +th.dataset.k; av.dir = 1; }
+    draw();
+  });
+  $("accts").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-a]");
+    if (b) goSearch({ acct: b.dataset.a });
+  });
+}
+
+// ---- Tabs and the address -------------------------------------------------
+let pivotScroll = [0, 0];
+function show(which) {
+  if (tab === "totals") pivotScroll = [$("pwrap").scrollLeft, $("pwrap").scrollTop];
+  tab = which === "totals" || which === "accounts" ? which : "search";
+  for (const name of ["search", "totals", "accounts"]) {
+    $("view-" + name).hidden = name !== tab;
+    $("tab-" + name).setAttribute("aria-selected", String(name === tab));
+  }
+  window.scrollTo(0, 0);
+  if (tab === "totals") {
+    renderPivot();
+    $("pwrap").scrollLeft = pivotScroll[0];
+    $("pwrap").scrollTop = pivotScroll[1];
+  }
+}
+$("tab-search").addEventListener("click", () => { show("search"); syncHash(true); });
+$("tab-totals").addEventListener("click", () => { show("totals"); syncHash(true); });
+$("tab-accounts").addEventListener("click", () => { show("accounts"); syncHash(true); });
+
+// The address holds the current view, so the Back button and bookmarks work.
+// eg: history.html#q=furnace&y1=2020 or history.html#tab=totals&pf=insurance
+function stateToHash() {
+  const p = new URLSearchParams();
+  if (tab !== "search") p.set("tab", tab);
+  for (const id of ["q", "cat", "acct", "pf"]) if ($(id).value) p.set(id, $(id).value);
+  if (+$("y1").value !== firstYear) p.set("y1", $("y1").value);
+  if (+$("y2").value !== lastYear) p.set("y2", $("y2").value);
+  if (!$("s-inv").checked) p.set("inv", "0");
+  if (!$("s-xfer").checked) p.set("xfer", "0");
+  if (state.sort !== "date" || state.dir !== -1) {
+    p.set("sort", state.sort);
+    p.set("dir", state.dir);
+  }
+  if (pv.all) p.set("open", "*");
+  else for (const name of [...pv.open].sort()) p.append("open", name);
+  if ($("p-inv").checked) p.set("pinv", "1");
+  if (pv.sort !== "name" || pv.dir !== 1) {
+    p.set("psort", pv.sort);
+    p.set("pdir", pv.dir);
+  }
+  return p.toString();
+}
+
+function syncHash(push) {
+  const want = stateToHash();
+  if (new URLSearchParams(location.hash.slice(1)).toString() === want) return;
+  if (push) { location.hash = want; return; }
+  try { history.replaceState(null, "", "#" + want); } catch (e) { /* address not updated */ }
+}
+
+function applyHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  for (const id of ["q", "cat", "pf"]) $(id).value = p.get(id) || "";
+  $("acct").value = p.get("acct") || "";
+  if ($("acct").selectedIndex < 0) $("acct").value = "";
+  $("y1").value = years.includes(+p.get("y1")) ? p.get("y1") : firstYear;
+  $("y2").value = years.includes(+p.get("y2")) ? p.get("y2") : lastYear;
+  $("s-inv").checked = p.get("inv") !== "0";
+  $("s-xfer").checked = p.get("xfer") !== "0";
+  const sort = p.get("sort");
+  state.sort = sort === "amount" || sortKey[sort] ? sort : "date";
+  state.dir = p.has("sort") ? (p.get("dir") === "-1" ? -1 : 1) : -1;
+  pv.all = p.get("open") === "*";
+  pv.open = new Set(pv.all ? [] : p.getAll("open"));
+  $("p-inv").checked = p.get("pinv") === "1";
+  pv.sort = p.get("psort") || "name";
+  pv.dir = p.get("pdir") === "-1" ? -1 : 1;
+  if (p.has("theme")) setTheme(p.get("theme"), false);
+  runSearch();
+  show(p.get("tab"));
+}
+window.addEventListener("hashchange", () => {
+  if (new URLSearchParams(location.hash.slice(1)).toString() !== stateToHash()) applyHash();
+});
+
+fillControls();
+applyHash();
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Real financial exports and the page built from them. Never commit these.
+data/
+__pycache__/
+# Personal working notes.
+notes/

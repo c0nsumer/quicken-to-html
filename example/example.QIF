@@ -1,0 +1,15942 @@
+!Type:Tag
+NTax Deduction
+^
+!Type:Cat
+NSalary
+DPaycheck
+I
+^
+NInterest Inc
+DInterest income
+I
+^
+N_DivInc
+DDividend
+I
+^
+NAuto:Fuel
+E
+^
+NAuto:Insurance
+E
+^
+NCharity
+E
+^
+NDining:Dinner
+E
+^
+NDining:Lunch
+E
+^
+NDining:Tip
+E
+^
+NGroceries
+E
+^
+NHousehold:Home Improvement
+E
+^
+NHousing:Mortgage
+E
+^
+NInsurance:Homeowner's
+E
+^
+NInsurance:Medical
+E
+^
+NInterest Exp
+DLoan interest
+E
+^
+NTax:Fed
+E
+^
+NTax:Medicare
+E
+^
+NTax:Sales
+E
+^
+NTax:Soc Sec
+E
+^
+NTax:State
+E
+^
+NUtilities:Electric
+E
+^
+NUtilities:Gas
+E
+^
+NUtilities:Water
+E
+^
+!Option:AutoSwitch
+!Account
+NChecking
+TBank
+^
+!Account
+NSavings
+TBank
+^
+!Account
+NVisa
+TCCard
+^
+!Account
+NCar Loan
+TOth L
+^
+!Account
+NBrokerage
+TPort
+^
+!Clear:AutoSwitch
+!Account
+NChecking
+TBank
+^
+!Type:Bank
+D1/ 1'21
+U2,500.00
+T2,500.00
+CX
+POpening Balance
+L[Checking]
+^
+D1/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D1/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D1/ 8'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/15'21
+U-322.00
+T-322.00
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-42.00
+^
+D1/22'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/25'21
+U-1,195.93
+T-1,195.93
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D2/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D2/ 5'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D2/15'21
+U-320.60
+T-320.60
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-40.60
+^
+D2/19'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/25'21
+U-1,708.82
+T-1,708.82
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D3/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D3/ 5'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D3/ 6'21
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D3/15'21
+U-319.20
+T-319.20
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-39.20
+^
+D3/19'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/25'21
+U-1,640.06
+T-1,640.06
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D4/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D4/ 2'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D4/15'21
+U-317.80
+T-317.80
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-37.80
+^
+D4/16'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/25'21
+U-887.14
+T-887.14
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D4/30'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D5/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D5/14'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/15'21
+U-316.40
+T-316.40
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-36.40
+^
+D5/25'21
+U-983.50
+T-983.50
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D5/28'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D6/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D6/ 6'21
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D6/11'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/15'21
+U-315.00
+T-315.00
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-35.00
+^
+D6/25'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/25'21
+U-1,094.17
+T-1,094.17
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D7/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D7/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D7/ 9'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/15'21
+U-313.60
+T-313.60
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-33.60
+^
+D7/23'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/25'21
+U-1,269.81
+T-1,269.81
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D8/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D8/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D8/ 6'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/15'21
+U-312.20
+T-312.20
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-32.20
+^
+D8/20'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/25'21
+U-1,483.89
+T-1,483.89
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D9/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D9/ 3'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D9/ 6'21
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D9/15'21
+U-310.80
+T-310.80
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-30.80
+^
+D9/17'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/25'21
+U-1,163.33
+T-1,163.33
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D10/ 1'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D10/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D10/15'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/15'21
+U-309.40
+T-309.40
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-29.40
+^
+D10/25'21
+U-1,041.68
+T-1,041.68
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D10/29'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D11/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D11/12'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/15'21
+U-308.00
+T-308.00
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-28.00
+^
+D11/25'21
+U-1,002.63
+T-1,002.63
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D11/26'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/ 1'21
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D12/ 5'21
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D12/ 6'21
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D12/10'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/15'21
+U-306.60
+T-306.60
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-26.60
+^
+D12/24'21
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/25'21
+U-1,202.94
+T-1,202.94
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D1/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D1/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D1/ 7'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/15'22
+U-305.20
+T-305.20
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-25.20
+^
+D1/21'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/25'22
+U-1,210.78
+T-1,210.78
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D2/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D2/ 4'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D2/15'22
+U-303.80
+T-303.80
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-23.80
+^
+D2/18'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/25'22
+U-1,531.03
+T-1,531.03
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D3/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D3/ 4'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D3/ 6'22
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D3/15'22
+U-302.40
+T-302.40
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-22.40
+^
+D3/18'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/25'22
+U-1,759.56
+T-1,759.56
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D4/ 1'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D4/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D4/15'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/15'22
+U-301.00
+T-301.00
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-21.00
+^
+D4/25'22
+U-954.55
+T-954.55
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D4/29'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D5/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D5/13'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/15'22
+U-299.60
+T-299.60
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-19.60
+^
+D5/25'22
+U-949.83
+T-949.83
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D5/27'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D6/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D6/ 6'22
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D6/10'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/15'22
+U-298.20
+T-298.20
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-18.20
+^
+D6/24'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/25'22
+U-1,262.93
+T-1,262.93
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D7/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D7/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D7/ 8'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/15'22
+U-296.80
+T-296.80
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-16.80
+^
+D7/22'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/25'22
+U-996.08
+T-996.08
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D8/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D8/ 5'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D8/15'22
+U-295.40
+T-295.40
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-15.40
+^
+D8/19'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/25'22
+U-1,538.49
+T-1,538.49
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D9/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D9/ 2'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D9/ 6'22
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D9/15'22
+U-294.00
+T-294.00
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-14.00
+^
+D9/16'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/25'22
+U-1,173.94
+T-1,173.94
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D9/30'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D10/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D10/14'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/15'22
+U-292.60
+T-292.60
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-12.60
+^
+D10/25'22
+U-1,051.28
+T-1,051.28
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D10/28'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D11/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D11/11'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/15'22
+U-291.20
+T-291.20
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-11.20
+^
+D11/25'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/25'22
+U-1,066.95
+T-1,066.95
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D12/ 1'22
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D12/ 5'22
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D12/ 6'22
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D12/ 9'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/15'22
+U-289.80
+T-289.80
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-9.80
+^
+D12/23'22
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/25'22
+U-1,182.30
+T-1,182.30
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D1/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D1/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D1/ 6'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/15'23
+U-288.40
+T-288.40
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-8.40
+^
+D1/20'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/25'23
+U-1,263.88
+T-1,263.88
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D2/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D2/ 3'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D2/15'23
+U-287.00
+T-287.00
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-7.00
+^
+D2/17'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/25'23
+U-1,698.74
+T-1,698.74
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D3/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D3/ 3'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D3/ 6'23
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D3/15'23
+U-285.60
+T-285.60
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-5.60
+^
+D3/17'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/25'23
+U-1,955.04
+T-1,955.04
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D3/31'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D4/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D4/14'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/15'23
+U-284.20
+T-284.20
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-4.20
+^
+D4/25'23
+U-1,061.34
+T-1,061.34
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D4/28'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D5/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D5/12'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/15'23
+U-282.80
+T-282.80
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-2.80
+^
+D5/25'23
+U-940.00
+T-940.00
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D5/26'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D6/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D6/ 6'23
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D6/ 9'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/15'23
+U-281.40
+T-281.40
+CX
+PExample Auto Finance
+MCar payment
+L--Split--
+S[Car Loan]
+EPrincipal
+$-280.00
+SInterest Exp
+EInterest
+$-1.40
+^
+D6/23'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/25'23
+U-1,118.82
+T-1,118.82
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D7/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D7/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D7/ 7'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/21'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/25'23
+U-1,002.56
+T-1,002.56
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D8/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D8/ 4'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D8/18'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/25'23
+U-1,569.24
+T-1,569.24
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D9/ 1'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D9/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D9/ 6'23
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D9/15'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/25'23
+U-1,093.83
+T-1,093.83
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D9/29'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D10/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D10/13'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/25'23
+U-1,127.56
+T-1,127.56
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D10/27'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D11/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D11/10'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/24'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/25'23
+U-1,062.41
+T-1,062.41
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D12/ 1'23
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D12/ 5'23
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D12/ 6'23
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D12/ 8'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/22'23
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/25'23
+U-1,151.59
+T-1,151.59
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D1/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D1/ 5'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D1/19'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/25'24
+U-1,204.17
+T-1,204.17
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D2/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D2/ 2'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D2/16'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/25'24
+U-1,709.45
+T-1,709.45
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D3/ 1'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D3/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D3/ 6'24
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D3/15'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/25'24
+U-1,995.73
+T-1,995.73
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D3/29'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D4/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D4/12'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/25'24
+U-1,102.50
+T-1,102.50
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D4/26'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D5/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D5/10'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/24'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/25'24
+U-1,106.77
+T-1,106.77
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D6/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D6/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D6/ 6'24
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D6/ 7'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/21'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/25'24
+U-1,145.96
+T-1,145.96
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D7/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D7/ 5'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D7/19'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/25'24
+U-1,035.60
+T-1,035.60
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D8/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D8/ 2'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D8/16'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/25'24
+U-1,539.63
+T-1,539.63
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D8/30'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D9/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D9/ 6'24
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D9/13'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/25'24
+U-913.81
+T-913.81
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D9/27'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D10/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D10/11'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/25'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/25'24
+U-1,307.44
+T-1,307.44
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D11/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D11/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D11/ 8'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/22'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/25'24
+U-1,159.21
+T-1,159.21
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D12/ 1'24
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D12/ 5'24
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D12/ 6'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/ 6'24
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D12/20'24
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/25'24
+U-1,146.74
+T-1,146.74
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D1/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D1/ 3'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D1/17'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D1/25'25
+U-1,032.92
+T-1,032.92
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D1/31'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D2/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D2/14'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D2/25'25
+U-1,776.29
+T-1,776.29
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D2/28'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D3/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D3/ 6'25
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D3/14'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D3/25'25
+U-1,958.28
+T-1,958.28
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D3/28'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D4/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D4/11'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/25'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D4/25'25
+U-986.43
+T-986.43
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D5/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D5/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D5/ 9'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/23'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D5/25'25
+U-987.52
+T-987.52
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D6/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D6/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D6/ 6'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/ 6'25
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D6/20'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D6/25'25
+U-1,208.70
+T-1,208.70
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D7/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D7/ 4'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D7/18'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D7/25'25
+U-970.89
+T-970.89
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D8/ 1'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D8/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D8/15'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D8/25'25
+U-1,637.61
+T-1,637.61
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D8/29'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D9/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D9/ 6'25
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D9/12'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D9/25'25
+U-1,023.26
+T-1,023.26
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D9/26'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D10/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D10/10'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/24'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D10/25'25
+U-1,105.48
+T-1,105.48
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D11/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D11/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D11/ 7'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/21'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D11/25'25
+U-1,120.11
+T-1,120.11
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+D12/ 1'25
+U-1,150.00
+T-1,150.00
+CX
+PFirst Example Mortgage
+LHousing:Mortgage
+^
+D12/ 5'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/ 5'25
+U-300.00
+T-300.00
+CX
+PTransfer to Savings
+L[Savings]
+^
+D12/ 6'25
+U-500.00
+T-500.00
+CX
+PTransfer to Brokerage
+L[Brokerage]
+^
+D12/19'25
+U1,893.60
+T1,893.60
+CX
+NDEP
+PExample Widgets Inc
+MPaycheck
+L--Split--
+SSalary
+EGross pay
+$2,600.00
+STax:Fed
+EFederal withholding
+$-312.00
+STax:State
+$-110.50
+STax:Soc Sec
+$-161.20
+STax:Medicare
+$-37.70
+SInsurance:Medical
+EHealth plan premium
+$-85.00
+^
+D12/25'25
+U-1,155.04
+T-1,155.04
+CX
+PVisa Payment
+MStatement balance
+L[Visa]
+^
+!Account
+NSavings
+TBank
+^
+!Type:Bank
+D1/ 1'21
+U5,000.00
+T5,000.00
+CX
+POpening Balance
+L[Savings]
+^
+D1/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D1/28'21
+U2.63
+T2.63
+CX
+PInterest Earned
+LInterest Inc
+^
+D2/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D2/28'21
+U3.77
+T3.77
+CX
+PInterest Earned
+LInterest Inc
+^
+D3/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D3/28'21
+U3.91
+T3.91
+CX
+PInterest Earned
+LInterest Inc
+^
+D4/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D4/28'21
+U2.07
+T2.07
+CX
+PInterest Earned
+LInterest Inc
+^
+D5/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D5/28'21
+U1.66
+T1.66
+CX
+PInterest Earned
+LInterest Inc
+^
+D6/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D6/28'21
+U3.19
+T3.19
+CX
+PInterest Earned
+LInterest Inc
+^
+D7/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D7/28'21
+U2.76
+T2.76
+CX
+PInterest Earned
+LInterest Inc
+^
+D8/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D8/28'21
+U1.91
+T1.91
+CX
+PInterest Earned
+LInterest Inc
+^
+D9/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D9/28'21
+U2.95
+T2.95
+CX
+PInterest Earned
+LInterest Inc
+^
+D10/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D10/28'21
+U3.97
+T3.97
+CX
+PInterest Earned
+LInterest Inc
+^
+D11/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D11/28'21
+U1.84
+T1.84
+CX
+PInterest Earned
+LInterest Inc
+^
+D12/ 5'21
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D12/28'21
+U2.62
+T2.62
+CX
+PInterest Earned
+LInterest Inc
+^
+D1/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D1/28'22
+U3.07
+T3.07
+CX
+PInterest Earned
+LInterest Inc
+^
+D2/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D2/28'22
+U3.88
+T3.88
+CX
+PInterest Earned
+LInterest Inc
+^
+D3/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D3/28'22
+U2.89
+T2.89
+CX
+PInterest Earned
+LInterest Inc
+^
+D4/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D4/28'22
+U2.31
+T2.31
+CX
+PInterest Earned
+LInterest Inc
+^
+D5/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D5/28'22
+U3.05
+T3.05
+CX
+PInterest Earned
+LInterest Inc
+^
+D6/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D6/28'22
+U3.97
+T3.97
+CX
+PInterest Earned
+LInterest Inc
+^
+D7/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D7/28'22
+U3.99
+T3.99
+CX
+PInterest Earned
+LInterest Inc
+^
+D8/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D8/28'22
+U1.96
+T1.96
+CX
+PInterest Earned
+LInterest Inc
+^
+D9/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D9/28'22
+U1.53
+T1.53
+CX
+PInterest Earned
+LInterest Inc
+^
+D10/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D10/28'22
+U1.79
+T1.79
+CX
+PInterest Earned
+LInterest Inc
+^
+D11/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D11/28'22
+U2.75
+T2.75
+CX
+PInterest Earned
+LInterest Inc
+^
+D12/ 5'22
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D12/28'22
+U3.15
+T3.15
+CX
+PInterest Earned
+LInterest Inc
+^
+D1/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D1/28'23
+U3.06
+T3.06
+CX
+PInterest Earned
+LInterest Inc
+^
+D2/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D2/28'23
+U2.77
+T2.77
+CX
+PInterest Earned
+LInterest Inc
+^
+D3/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D3/28'23
+U2.00
+T2.00
+CX
+PInterest Earned
+LInterest Inc
+^
+D4/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D4/28'23
+U3.36
+T3.36
+CX
+PInterest Earned
+LInterest Inc
+^
+D5/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D5/28'23
+U1.62
+T1.62
+CX
+PInterest Earned
+LInterest Inc
+^
+D6/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D6/28'23
+U2.84
+T2.84
+CX
+PInterest Earned
+LInterest Inc
+^
+D7/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D7/28'23
+U3.16
+T3.16
+CX
+PInterest Earned
+LInterest Inc
+^
+D8/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D8/28'23
+U3.29
+T3.29
+CX
+PInterest Earned
+LInterest Inc
+^
+D9/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D9/28'23
+U1.99
+T1.99
+CX
+PInterest Earned
+LInterest Inc
+^
+D10/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D10/28'23
+U2.04
+T2.04
+CX
+PInterest Earned
+LInterest Inc
+^
+D11/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D11/28'23
+U2.58
+T2.58
+CX
+PInterest Earned
+LInterest Inc
+^
+D12/ 5'23
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D12/28'23
+U2.06
+T2.06
+CX
+PInterest Earned
+LInterest Inc
+^
+D1/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D1/28'24
+U3.09
+T3.09
+CX
+PInterest Earned
+LInterest Inc
+^
+D2/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D2/28'24
+U3.02
+T3.02
+CX
+PInterest Earned
+LInterest Inc
+^
+D3/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D3/28'24
+U2.26
+T2.26
+CX
+PInterest Earned
+LInterest Inc
+^
+D4/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D4/28'24
+U3.00
+T3.00
+CX
+PInterest Earned
+LInterest Inc
+^
+D5/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D5/28'24
+U3.42
+T3.42
+CX
+PInterest Earned
+LInterest Inc
+^
+D6/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D6/28'24
+U3.76
+T3.76
+CX
+PInterest Earned
+LInterest Inc
+^
+D7/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D7/28'24
+U3.24
+T3.24
+CX
+PInterest Earned
+LInterest Inc
+^
+D8/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D8/28'24
+U2.96
+T2.96
+CX
+PInterest Earned
+LInterest Inc
+^
+D9/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D9/28'24
+U2.53
+T2.53
+CX
+PInterest Earned
+LInterest Inc
+^
+D10/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D10/28'24
+U2.77
+T2.77
+CX
+PInterest Earned
+LInterest Inc
+^
+D11/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D11/28'24
+U2.32
+T2.32
+CX
+PInterest Earned
+LInterest Inc
+^
+D12/ 5'24
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D12/28'24
+U2.79
+T2.79
+CX
+PInterest Earned
+LInterest Inc
+^
+D1/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D1/28'25
+U3.89
+T3.89
+CX
+PInterest Earned
+LInterest Inc
+^
+D2/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D2/28'25
+U3.18
+T3.18
+CX
+PInterest Earned
+LInterest Inc
+^
+D3/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D3/28'25
+U2.94
+T2.94
+CX
+PInterest Earned
+LInterest Inc
+^
+D4/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D4/28'25
+U1.63
+T1.63
+CX
+PInterest Earned
+LInterest Inc
+^
+D5/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D5/28'25
+U3.01
+T3.01
+CX
+PInterest Earned
+LInterest Inc
+^
+D6/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D6/28'25
+U1.76
+T1.76
+CX
+PInterest Earned
+LInterest Inc
+^
+D7/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D7/28'25
+U2.36
+T2.36
+CX
+PInterest Earned
+LInterest Inc
+^
+D8/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D8/28'25
+U2.70
+T2.70
+CX
+PInterest Earned
+LInterest Inc
+^
+D9/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D9/28'25
+U2.12
+T2.12
+CX
+PInterest Earned
+LInterest Inc
+^
+D10/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D10/28'25
+U1.87
+T1.87
+CX
+PInterest Earned
+LInterest Inc
+^
+D11/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D11/28'25
+U3.94
+T3.94
+CX
+PInterest Earned
+LInterest Inc
+^
+D12/ 5'25
+U300.00
+T300.00
+CX
+PTransfer to Savings
+L[Checking]
+^
+D12/28'25
+U3.04
+T3.04
+CX
+PInterest Earned
+LInterest Inc
+^
+!Account
+NVisa
+TCCard
+^
+!Type:CCard
+D1/ 2'21
+U-72.61
+T-72.61
+CX
+PCorner Market
+LGroceries
+^
+D1/ 3'21
+U-53.65
+T-53.65
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D1/ 3'21
+U-90.36
+T-90.36
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-72.87
+STax:Sales
+$-4.37
+SDining:Tip
+$-13.12
+^
+D1/ 4'21
+U-40.36
+T-40.36
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/ 5'21
+U-13.98
+T-13.98
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-11.27
+STax:Sales
+$-0.68
+SDining:Tip
+$-2.03
+^
+D1/ 8'21
+U-120.34
+T-120.34
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D1/ 9'21
+U-128.73
+T-128.73
+CX
+PCorner Market
+LGroceries
+^
+D1/12'21
+U-147.23
+T-147.23
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D1/13'21
+U-15.19
+T-15.19
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-12.25
+STax:Sales
+$-0.74
+SDining:Tip
+$-2.20
+^
+D1/16'21
+U-146.44
+T-146.44
+CX
+PCorner Market
+LGroceries
+^
+D1/17'21
+U-28.79
+T-28.79
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/18'21
+U-31.01
+T-31.01
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/19'21
+U-101.54
+T-101.54
+CX
+PHardware Barn
+MCaulk and weatherstripping
+L--Split--
+SHousehold:Home Improvement
+$-95.79
+STax:Sales
+$-5.75
+^
+D1/21'21
+U-61.77
+T-61.77
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-49.81
+STax:Sales
+$-2.99
+SDining:Tip
+$-8.97
+^
+D1/23'21
+U-104.03
+T-104.03
+CX
+PCorner Market
+LGroceries
+^
+D1/25'21
+U1,195.93
+T1,195.93
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D1/27'21
+U-39.90
+T-39.90
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-32.18
+STax:Sales
+$-1.93
+SDining:Tip
+$-5.79
+^
+D2/ 1'21
+U-101.12
+T-101.12
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-81.55
+STax:Sales
+$-4.89
+SDining:Tip
+$-14.68
+^
+D2/ 2'21
+U-60.92
+T-60.92
+CX
+PCorner Market
+LGroceries
+^
+D2/ 2'21
+U-39.54
+T-39.54
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-31.89
+STax:Sales
+$-1.91
+SDining:Tip
+$-5.74
+^
+D2/ 3'21
+U-50.65
+T-50.65
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D2/ 8'21
+U-119.37
+T-119.37
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D2/ 8'21
+U-38.90
+T-38.90
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-31.37
+STax:Sales
+$-1.88
+SDining:Tip
+$-5.65
+^
+D2/ 9'21
+U-129.49
+T-129.49
+CX
+PCorner Market
+LGroceries
+^
+D2/11'21
+U-38.40
+T-38.40
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/12'21
+U-126.36
+T-126.36
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D2/14'21
+U-21.92
+T-21.92
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-17.68
+STax:Sales
+$-1.06
+SDining:Tip
+$-3.18
+^
+D2/14'21
+U-485.00
+T-485.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D2/15'21
+U-46.50
+T-46.50
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/16'21
+U-153.48
+T-153.48
+CX
+PCorner Market
+LGroceries
+^
+D2/22'21
+U-124.59
+T-124.59
+CX
+PHardware Barn
+MFurnace filters
+L--Split--
+SHousehold:Home Improvement
+$-117.54
+STax:Sales
+$-7.05
+^
+D2/23'21
+U-69.28
+T-69.28
+CX
+PCorner Market
+LGroceries
+^
+D2/25'21
+U-57.11
+T-57.11
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-46.06
+STax:Sales
+$-2.76
+SDining:Tip
+$-8.29
+^
+D2/25'21
+U1,708.82
+T1,708.82
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D2/27'21
+U-46.19
+T-46.19
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/ 2'21
+U-105.87
+T-105.87
+CX
+PCorner Market
+LGroceries
+^
+D3/ 2'21
+U-48.26
+T-48.26
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/ 2'21
+U-23.58
+T-23.58
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-19.02
+STax:Sales
+$-1.14
+SDining:Tip
+$-3.42
+^
+D3/ 3'21
+U-48.74
+T-48.74
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D3/ 6'21
+U-28.78
+T-28.78
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/ 6'21
+U-18.54
+T-18.54
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-14.95
+STax:Sales
+$-0.90
+SDining:Tip
+$-2.69
+^
+D3/ 8'21
+U-111.63
+T-111.63
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D3/ 9'21
+U-152.26
+T-152.26
+CX
+PCorner Market
+LGroceries
+^
+D3/ 9'21
+U-25.48
+T-25.48
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-20.55
+STax:Sales
+$-1.23
+SDining:Tip
+$-3.70
+^
+D3/10'21
+U-76.53
+T-76.53
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-61.72
+STax:Sales
+$-3.70
+SDining:Tip
+$-11.11
+^
+D3/10'21
+U-612.00
+T-612.00
+CX
+PExample Mutual Insurance
+MPolicy HO-000123, annual premium
+LInsurance:Homeowner's
+^
+D3/12'21
+U-106.57
+T-106.57
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D3/16'21
+U-88.86
+T-88.86
+CX
+PCorner Market
+LGroceries
+^
+D3/17'21
+U-14.10
+T-14.10
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-11.37
+STax:Sales
+$-0.68
+SDining:Tip
+$-2.05
+^
+D3/20'21
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D3/23'21
+U-98.15
+T-98.15
+CX
+PCorner Market
+LGroceries
+^
+D3/25'21
+U-30.71
+T-30.71
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/25'21
+U1,640.06
+T1,640.06
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D4/ 1'21
+U-17.61
+T-17.61
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-14.20
+STax:Sales
+$-0.85
+SDining:Tip
+$-2.56
+^
+D4/ 2'21
+U-102.85
+T-102.85
+CX
+PCorner Market
+LGroceries
+^
+D4/ 2'21
+U-35.42
+T-35.42
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/ 3'21
+U-41.20
+T-41.20
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D4/ 4'21
+U-29.23
+T-29.23
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-23.58
+STax:Sales
+$-1.41
+SDining:Tip
+$-4.24
+^
+D4/ 5'21
+U-33.77
+T-33.77
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/ 8'21
+U-117.22
+T-117.22
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D4/ 9'21
+U-65.14
+T-65.14
+CX
+PCorner Market
+LGroceries
+^
+D4/10'21
+U-19.21
+T-19.21
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-15.49
+STax:Sales
+$-0.93
+SDining:Tip
+$-2.79
+^
+D4/12'21
+U-27.23
+T-27.23
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D4/14'21
+U-60.28
+T-60.28
+CX
+PHardware Barn
+MGarden hose
+L--Split--
+SHousehold:Home Improvement
+$-56.87
+STax:Sales
+$-3.41
+^
+D4/16'21
+U-144.13
+T-144.13
+CX
+PCorner Market
+LGroceries
+^
+D4/18'21
+U-35.88
+T-35.88
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/21'21
+U-61.02
+T-61.02
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-49.21
+STax:Sales
+$-2.95
+SDining:Tip
+$-8.86
+^
+D4/23'21
+U-69.55
+T-69.55
+CX
+PCorner Market
+LGroceries
+^
+D4/25'21
+U-27.40
+T-27.40
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-22.09
+STax:Sales
+$-1.33
+SDining:Tip
+$-3.98
+^
+D4/25'21
+U887.14
+T887.14
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D5/ 2'21
+U-63.89
+T-63.89
+CX
+PCorner Market
+LGroceries
+^
+D5/ 3'21
+U-43.09
+T-43.09
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D5/ 3'21
+U-32.68
+T-32.68
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/ 3'21
+U-57.55
+T-57.55
+CX
+PHardware Barn
+MPaint and rollers
+L--Split--
+SHousehold:Home Improvement
+$-54.29
+STax:Sales
+$-3.26
+^
+D5/ 4'21
+U-22.10
+T-22.10
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-17.82
+STax:Sales
+$-1.07
+SDining:Tip
+$-3.21
+^
+D5/ 8'21
+U-70.19
+T-70.19
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D5/ 9'21
+U-157.08
+T-157.08
+CX
+PCorner Market
+LGroceries
+^
+D5/ 9'21
+U-48.71
+T-48.71
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/ 9'21
+U-38.81
+T-38.81
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-31.30
+STax:Sales
+$-1.88
+SDining:Tip
+$-5.63
+^
+D5/11'21
+U-43.60
+T-43.60
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/12'21
+U-30.06
+T-30.06
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D5/16'21
+U-103.51
+T-103.51
+CX
+PCorner Market
+LGroceries
+^
+D5/17'21
+U-39.73
+T-39.73
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-32.04
+STax:Sales
+$-1.92
+SDining:Tip
+$-5.77
+^
+D5/20'21
+U-65.80
+T-65.80
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-53.07
+STax:Sales
+$-3.18
+SDining:Tip
+$-9.55
+^
+D5/23'21
+U-114.91
+T-114.91
+CX
+PCorner Market
+LGroceries
+^
+D5/24'21
+U-51.79
+T-51.79
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-41.76
+STax:Sales
+$-2.51
+SDining:Tip
+$-7.52
+^
+D5/25'21
+U983.50
+T983.50
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D6/ 2'21
+U-127.05
+T-127.05
+CX
+PCorner Market
+LGroceries
+^
+D6/ 3'21
+U-53.33
+T-53.33
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D6/ 5'21
+U-42.55
+T-42.55
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/ 8'21
+U-127.56
+T-127.56
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D6/ 9'21
+U-145.12
+T-145.12
+CX
+PCorner Market
+LGroceries
+^
+D6/ 9'21
+U-14.49
+T-14.49
+CX
+PHardware Barn
+MFurnace filters
+L--Split--
+SHousehold:Home Improvement
+$-13.67
+STax:Sales
+$-0.82
+^
+D6/12'21
+U-20.44
+T-20.44
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D6/12'21
+U-47.27
+T-47.27
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/14'21
+U-57.61
+T-57.61
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-46.46
+STax:Sales
+$-2.79
+SDining:Tip
+$-8.36
+^
+D6/15'21
+U-60.95
+T-60.95
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-49.15
+STax:Sales
+$-2.95
+SDining:Tip
+$-8.85
+^
+D6/16'21
+U-144.56
+T-144.56
+CX
+PCorner Market
+LGroceries
+^
+D6/16'21
+U-45.33
+T-45.33
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/18'21
+U-28.67
+T-28.67
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-23.12
+STax:Sales
+$-1.39
+SDining:Tip
+$-4.16
+^
+D6/20'21
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D6/21'21
+U-14.93
+T-14.93
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-12.04
+STax:Sales
+$-0.72
+SDining:Tip
+$-2.17
+^
+D6/22'21
+U-19.99
+T-19.99
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-16.12
+STax:Sales
+$-0.97
+SDining:Tip
+$-2.90
+^
+D6/23'21
+U-94.32
+T-94.32
+CX
+PCorner Market
+LGroceries
+^
+D6/25'21
+U1,094.17
+T1,094.17
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D7/ 1'21
+U-52.41
+T-52.41
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-42.26
+STax:Sales
+$-2.54
+SDining:Tip
+$-7.61
+^
+D7/ 2'21
+U-130.80
+T-130.80
+CX
+PCorner Market
+LGroceries
+^
+D7/ 3'21
+U-43.51
+T-43.51
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D7/ 7'21
+U-105.63
+T-105.63
+CX
+PHardware Barn
+MCaulk and weatherstripping
+L--Split--
+SHousehold:Home Improvement
+$-99.65
+STax:Sales
+$-5.98
+^
+D7/ 8'21
+U-115.61
+T-115.61
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D7/ 9'21
+U-115.32
+T-115.32
+CX
+PCorner Market
+LGroceries
+^
+D7/ 9'21
+U-32.48
+T-32.48
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/10'21
+U-32.66
+T-32.66
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/11'21
+U-28.48
+T-28.48
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/12'21
+U-21.92
+T-21.92
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D7/14'21
+U-73.34
+T-73.34
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-59.14
+STax:Sales
+$-3.55
+SDining:Tip
+$-10.65
+^
+D7/16'21
+U-81.92
+T-81.92
+CX
+PCorner Market
+LGroceries
+^
+D7/18'21
+U-104.11
+T-104.11
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-83.96
+STax:Sales
+$-5.04
+SDining:Tip
+$-15.11
+^
+D7/19'21
+U-70.60
+T-70.60
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-56.93
+STax:Sales
+$-3.42
+SDining:Tip
+$-10.25
+^
+D7/23'21
+U-158.56
+T-158.56
+CX
+PCorner Market
+LGroceries
+^
+D7/23'21
+U-102.46
+T-102.46
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-82.63
+STax:Sales
+$-4.96
+SDining:Tip
+$-14.87
+^
+D7/25'21
+U1,269.81
+T1,269.81
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D8/ 2'21
+U-100.62
+T-100.62
+CX
+PCorner Market
+LGroceries
+^
+D8/ 3'21
+U-38.19
+T-38.19
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D8/ 5'21
+U-30.75
+T-30.75
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/ 8'21
+U-133.26
+T-133.26
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D8/ 8'21
+U-19.89
+T-19.89
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-16.04
+STax:Sales
+$-0.96
+SDining:Tip
+$-2.89
+^
+D8/ 9'21
+U-106.27
+T-106.27
+CX
+PCorner Market
+LGroceries
+^
+D8/12'21
+U-24.70
+T-24.70
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D8/14'21
+U-88.52
+T-88.52
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-71.39
+STax:Sales
+$-4.28
+SDining:Tip
+$-12.85
+^
+D8/14'21
+U-485.00
+T-485.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D8/16'21
+U-126.96
+T-126.96
+CX
+PCorner Market
+LGroceries
+^
+D8/17'21
+U-31.54
+T-31.54
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/18'21
+U-33.50
+T-33.50
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/18'21
+U-43.41
+T-43.41
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-35.01
+STax:Sales
+$-2.10
+SDining:Tip
+$-6.30
+^
+D8/20'21
+U-54.58
+T-54.58
+CX
+PHardware Barn
+MCaulk and weatherstripping
+L--Split--
+SHousehold:Home Improvement
+$-51.49
+STax:Sales
+$-3.09
+^
+D8/23'21
+U-117.41
+T-117.41
+CX
+PCorner Market
+LGroceries
+^
+D8/25'21
+U-20.71
+T-20.71
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-16.70
+STax:Sales
+$-1.00
+SDining:Tip
+$-3.01
+^
+D8/25'21
+U1,483.89
+T1,483.89
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D8/27'21
+U-28.58
+T-28.58
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-23.05
+STax:Sales
+$-1.38
+SDining:Tip
+$-4.15
+^
+D9/ 2'21
+U-79.03
+T-79.03
+CX
+PCorner Market
+LGroceries
+^
+D9/ 3'21
+U-38.41
+T-38.41
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D9/ 3'21
+U-51.49
+T-51.49
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/ 8'21
+U-125.04
+T-125.04
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D9/ 8'21
+U-30.41
+T-30.41
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/ 8'21
+U-111.10
+T-111.10
+CX
+PHardware Barn
+MShelf brackets
+L--Split--
+SHousehold:Home Improvement
+$-104.81
+STax:Sales
+$-6.29
+^
+D9/ 9'21
+U-147.19
+T-147.19
+CX
+PCorner Market
+LGroceries
+^
+D9/ 9'21
+U-25.47
+T-25.47
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-20.54
+STax:Sales
+$-1.23
+SDining:Tip
+$-3.70
+^
+D9/12'21
+U-25.86
+T-25.86
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D9/15'21
+U-87.50
+T-87.50
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-70.57
+STax:Sales
+$-4.23
+SDining:Tip
+$-12.70
+^
+D9/16'21
+U-69.53
+T-69.53
+CX
+PCorner Market
+LGroceries
+^
+D9/16'21
+U-37.73
+T-37.73
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/20'21
+U-51.00
+T-51.00
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-41.13
+STax:Sales
+$-2.47
+SDining:Tip
+$-7.40
+^
+D9/20'21
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D9/21'21
+U-47.88
+T-47.88
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-38.61
+STax:Sales
+$-2.32
+SDining:Tip
+$-6.95
+^
+D9/23'21
+U-102.24
+T-102.24
+CX
+PCorner Market
+LGroceries
+^
+D9/25'21
+U-83.45
+T-83.45
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-67.30
+STax:Sales
+$-4.04
+SDining:Tip
+$-12.11
+^
+D9/25'21
+U1,163.33
+T1,163.33
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D10/ 1'21
+U-29.10
+T-29.10
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-23.47
+STax:Sales
+$-1.41
+SDining:Tip
+$-4.22
+^
+D10/ 2'21
+U-107.20
+T-107.20
+CX
+PCorner Market
+LGroceries
+^
+D10/ 3'21
+U-39.56
+T-39.56
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D10/ 3'21
+U-51.26
+T-51.26
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/ 3'21
+U-43.38
+T-43.38
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-34.98
+STax:Sales
+$-2.10
+SDining:Tip
+$-6.30
+^
+D10/ 8'21
+U-95.05
+T-95.05
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D10/ 9'21
+U-133.46
+T-133.46
+CX
+PCorner Market
+LGroceries
+^
+D10/11'21
+U-81.23
+T-81.23
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-65.51
+STax:Sales
+$-3.93
+SDining:Tip
+$-11.79
+^
+D10/11'21
+U-96.45
+T-96.45
+CX
+PHardware Barn
+MDrill bits
+L--Split--
+SHousehold:Home Improvement
+$-90.99
+STax:Sales
+$-5.46
+^
+D10/12'21
+U-21.76
+T-21.76
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D10/13'21
+U-28.81
+T-28.81
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/16'21
+U-130.04
+T-130.04
+CX
+PCorner Market
+LGroceries
+^
+D10/20'21
+U-17.22
+T-17.22
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-13.89
+STax:Sales
+$-0.83
+SDining:Tip
+$-2.50
+^
+D10/21'21
+U-33.54
+T-33.54
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/23'21
+U-91.82
+T-91.82
+CX
+PCorner Market
+LGroceries
+^
+D10/25'21
+U1,041.68
+T1,041.68
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D10/26'21
+U-41.80
+T-41.80
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-33.71
+STax:Sales
+$-2.02
+SDining:Tip
+$-6.07
+^
+D11/ 2'21
+U-146.15
+T-146.15
+CX
+PCorner Market
+LGroceries
+^
+D11/ 3'21
+U-52.97
+T-52.97
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D11/ 3'21
+U-16.46
+T-16.46
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-13.27
+STax:Sales
+$-0.80
+SDining:Tip
+$-2.39
+^
+D11/ 5'21
+U-50.81
+T-50.81
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/ 7'21
+U-14.72
+T-14.72
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-11.87
+STax:Sales
+$-0.71
+SDining:Tip
+$-2.14
+^
+D11/ 8'21
+U-70.77
+T-70.77
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D11/ 9'21
+U-73.53
+T-73.53
+CX
+PCorner Market
+LGroceries
+^
+D11/10'21
+U-27.02
+T-27.02
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-21.79
+STax:Sales
+$-1.31
+SDining:Tip
+$-3.92
+^
+D11/12'21
+U-107.95
+T-107.95
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D11/12'21
+U-49.92
+T-49.92
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/13'21
+U-35.58
+T-35.58
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/13'21
+U-23.54
+T-23.54
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-18.98
+STax:Sales
+$-1.14
+SDining:Tip
+$-3.42
+^
+D11/16'21
+U-88.03
+T-88.03
+CX
+PCorner Market
+LGroceries
+^
+D11/16'21
+U-87.82
+T-87.82
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-70.82
+STax:Sales
+$-4.25
+SDining:Tip
+$-12.75
+^
+D11/23'21
+U-157.36
+T-157.36
+CX
+PCorner Market
+LGroceries
+^
+D11/25'21
+U1,002.63
+T1,002.63
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D12/ 2'21
+U-108.50
+T-108.50
+CX
+PCorner Market
+LGroceries
+^
+D12/ 2'21
+U-31.84
+T-31.84
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/ 3'21
+U-54.69
+T-54.69
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D12/ 7'21
+U-16.03
+T-16.03
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-12.92
+STax:Sales
+$-0.78
+SDining:Tip
+$-2.33
+^
+D12/ 8'21
+U-100.73
+T-100.73
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D12/ 9'21
+U-63.31
+T-63.31
+CX
+PCorner Market
+LGroceries
+^
+D12/10'21
+U-39.48
+T-39.48
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/12'21
+U-94.83
+T-94.83
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D12/16'21
+U-142.90
+T-142.90
+CX
+PCorner Market
+LGroceries
+^
+D12/16'21
+U-33.73
+T-33.73
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/17'21
+U-20.00
+T-20.00
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-16.13
+STax:Sales
+$-0.97
+SDining:Tip
+$-2.90
+^
+D12/20'21
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D12/23'21
+U-144.96
+T-144.96
+CX
+PCorner Market
+LGroceries
+^
+D12/23'21
+U-27.69
+T-27.69
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-22.33
+STax:Sales
+$-1.34
+SDining:Tip
+$-4.02
+^
+D12/25'21
+U-87.84
+T-87.84
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-70.84
+STax:Sales
+$-4.25
+SDining:Tip
+$-12.75
+^
+D12/25'21
+U1,202.94
+T1,202.94
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D12/27'21
+U-96.76
+T-96.76
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-78.03
+STax:Sales
+$-4.68
+SDining:Tip
+$-14.05
+^
+D12/27'21
+U-89.65
+T-89.65
+CX
+PHardware Barn
+MGarden hose
+L--Split--
+SHousehold:Home Improvement
+$-84.58
+STax:Sales
+$-5.07
+^
+D1/ 2'22
+U-114.66
+T-114.66
+CX
+PCorner Market
+LGroceries
+^
+D1/ 3'22
+U-48.59
+T-48.59
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D1/ 5'22
+U-95.64
+T-95.64
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-77.13
+STax:Sales
+$-4.63
+SDining:Tip
+$-13.88
+^
+D1/ 8'22
+U-89.11
+T-89.11
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D1/ 9'22
+U-78.09
+T-78.09
+CX
+PCorner Market
+LGroceries
+^
+D1/12'22
+U-174.33
+T-174.33
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D1/12'22
+U-17.96
+T-17.96
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-14.48
+STax:Sales
+$-0.87
+SDining:Tip
+$-2.61
+^
+D1/14'22
+U-18.88
+T-18.88
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-15.23
+STax:Sales
+$-0.91
+SDining:Tip
+$-2.74
+^
+D1/16'22
+U-129.87
+T-129.87
+CX
+PCorner Market
+LGroceries
+^
+D1/16'22
+U-29.82
+T-29.82
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/16'22
+U-55.62
+T-55.62
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-44.86
+STax:Sales
+$-2.69
+SDining:Tip
+$-8.07
+^
+D1/18'22
+U-94.72
+T-94.72
+CX
+PHardware Barn
+MLight bulbs, outlet covers
+L--Split--
+SHousehold:Home Improvement
+$-89.36
+STax:Sales
+$-5.36
+^
+D1/19'22
+U-79.71
+T-79.71
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-64.28
+STax:Sales
+$-3.86
+SDining:Tip
+$-11.57
+^
+D1/20'22
+U-41.29
+T-41.29
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/23'22
+U-96.50
+T-96.50
+CX
+PCorner Market
+LGroceries
+^
+D1/25'22
+U-45.99
+T-45.99
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/25'22
+U1,210.78
+T1,210.78
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D2/ 2'22
+U-96.43
+T-96.43
+CX
+PCorner Market
+LGroceries
+^
+D2/ 3'22
+U-48.18
+T-48.18
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D2/ 3'22
+U-11.14
+T-11.14
+CX
+PHardware Barn
+MShelf brackets
+L--Split--
+SHousehold:Home Improvement
+$-10.51
+STax:Sales
+$-0.63
+^
+D2/ 8'22
+U-86.55
+T-86.55
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D2/ 8'22
+U-46.46
+T-46.46
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-37.47
+STax:Sales
+$-2.25
+SDining:Tip
+$-6.74
+^
+D2/ 9'22
+U-85.34
+T-85.34
+CX
+PCorner Market
+LGroceries
+^
+D2/ 9'22
+U-38.38
+T-38.38
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/ 9'22
+U-56.21
+T-56.21
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-45.33
+STax:Sales
+$-2.72
+SDining:Tip
+$-8.16
+^
+D2/12'22
+U-101.60
+T-101.60
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D2/13'22
+U-29.46
+T-29.46
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/14'22
+U-500.00
+T-500.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D2/16'22
+U-127.34
+T-127.34
+CX
+PCorner Market
+LGroceries
+^
+D2/22'22
+U-20.30
+T-20.30
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-16.37
+STax:Sales
+$-0.98
+SDining:Tip
+$-2.95
+^
+D2/23'22
+U-100.35
+T-100.35
+CX
+PCorner Market
+LGroceries
+^
+D2/23'22
+U-65.12
+T-65.12
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-52.52
+STax:Sales
+$-3.15
+SDining:Tip
+$-9.45
+^
+D2/25'22
+U-35.89
+T-35.89
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/25'22
+U1,531.03
+T1,531.03
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D2/26'22
+U-82.28
+T-82.28
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-66.36
+STax:Sales
+$-3.98
+SDining:Tip
+$-11.94
+^
+D3/ 2'22
+U-83.17
+T-83.17
+CX
+PCorner Market
+LGroceries
+^
+D3/ 3'22
+U-45.23
+T-45.23
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D3/ 7'22
+U-42.12
+T-42.12
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-33.97
+STax:Sales
+$-2.04
+SDining:Tip
+$-6.11
+^
+D3/ 7'22
+U-40.58
+T-40.58
+CX
+PHardware Barn
+MFurnace filters
+L--Split--
+SHousehold:Home Improvement
+$-38.28
+STax:Sales
+$-2.30
+^
+D3/ 8'22
+U-121.46
+T-121.46
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D3/ 9'22
+U-83.90
+T-83.90
+CX
+PCorner Market
+LGroceries
+^
+D3/ 9'22
+U-45.78
+T-45.78
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/10'22
+U-101.60
+T-101.60
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-81.93
+STax:Sales
+$-4.92
+SDining:Tip
+$-14.75
+^
+D3/10'22
+U-640.00
+T-640.00
+CX
+PExample Mutual Insurance
+MPolicy HO-000123, annual premium
+LInsurance:Homeowner's
+^
+D3/11'22
+U-21.95
+T-21.95
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-17.70
+STax:Sales
+$-1.06
+SDining:Tip
+$-3.19
+^
+D3/12'22
+U-173.79
+T-173.79
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D3/13'22
+U-46.91
+T-46.91
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-37.83
+STax:Sales
+$-2.27
+SDining:Tip
+$-6.81
+^
+D3/14'22
+U-19.92
+T-19.92
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-16.07
+STax:Sales
+$-0.96
+SDining:Tip
+$-2.89
+^
+D3/16'22
+U-85.43
+T-85.43
+CX
+PCorner Market
+LGroceries
+^
+D3/20'22
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D3/22'22
+U-48.80
+T-48.80
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/23'22
+U-80.38
+T-80.38
+CX
+PCorner Market
+LGroceries
+^
+D3/24'22
+U-28.54
+T-28.54
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/25'22
+U1,759.56
+T1,759.56
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D4/ 1'22
+U-42.64
+T-42.64
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/ 2'22
+U-91.41
+T-91.41
+CX
+PCorner Market
+LGroceries
+^
+D4/ 3'22
+U-40.92
+T-40.92
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D4/ 5'22
+U-22.52
+T-22.52
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-18.16
+STax:Sales
+$-1.09
+SDining:Tip
+$-3.27
+^
+D4/ 6'22
+U-43.41
+T-43.41
+CX
+PHardware Barn
+MDeck screws, wood glue
+L--Split--
+SHousehold:Home Improvement
+$-40.95
+STax:Sales
+$-2.46
+^
+D4/ 8'22
+U-64.55
+T-64.55
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D4/ 9'22
+U-86.92
+T-86.92
+CX
+PCorner Market
+LGroceries
+^
+D4/12'22
+U-30.76
+T-30.76
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D4/13'22
+U-93.27
+T-93.27
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-75.22
+STax:Sales
+$-4.51
+SDining:Tip
+$-13.54
+^
+D4/15'22
+U-13.76
+T-13.76
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-11.09
+STax:Sales
+$-0.67
+SDining:Tip
+$-2.00
+^
+D4/16'22
+U-88.94
+T-88.94
+CX
+PCorner Market
+LGroceries
+^
+D4/19'22
+U-46.89
+T-46.89
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/21'22
+U-80.37
+T-80.37
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-64.81
+STax:Sales
+$-3.89
+SDining:Tip
+$-11.67
+^
+D4/23'22
+U-145.42
+T-145.42
+CX
+PCorner Market
+LGroceries
+^
+D4/24'22
+U-18.23
+T-18.23
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-14.70
+STax:Sales
+$-0.88
+SDining:Tip
+$-2.65
+^
+D4/25'22
+U-44.54
+T-44.54
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/25'22
+U954.55
+T954.55
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D5/ 1'22
+U-39.32
+T-39.32
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-31.71
+STax:Sales
+$-1.90
+SDining:Tip
+$-5.71
+^
+D5/ 2'22
+U-85.19
+T-85.19
+CX
+PCorner Market
+LGroceries
+^
+D5/ 2'22
+U-32.97
+T-32.97
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/ 3'22
+U-43.38
+T-43.38
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D5/ 3'22
+U-20.26
+T-20.26
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-16.34
+STax:Sales
+$-0.98
+SDining:Tip
+$-2.94
+^
+D5/ 8'22
+U-125.80
+T-125.80
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D5/ 9'22
+U-63.20
+T-63.20
+CX
+PCorner Market
+LGroceries
+^
+D5/12'22
+U-30.32
+T-30.32
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D5/14'22
+U-49.05
+T-49.05
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/14'22
+U-64.43
+T-64.43
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-51.96
+STax:Sales
+$-3.12
+SDining:Tip
+$-9.35
+^
+D5/15'22
+U-27.65
+T-27.65
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-22.30
+STax:Sales
+$-1.34
+SDining:Tip
+$-4.01
+^
+D5/16'22
+U-146.28
+T-146.28
+CX
+PCorner Market
+LGroceries
+^
+D5/18'22
+U-10.96
+T-10.96
+CX
+PHardware Barn
+MLight bulbs, outlet covers
+L--Split--
+SHousehold:Home Improvement
+$-10.34
+STax:Sales
+$-0.62
+^
+D5/23'22
+U-149.56
+T-149.56
+CX
+PCorner Market
+LGroceries
+^
+D5/23'22
+U-16.56
+T-16.56
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-13.36
+STax:Sales
+$-0.80
+SDining:Tip
+$-2.40
+^
+D5/24'22
+U-44.90
+T-44.90
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/25'22
+U949.83
+T949.83
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D6/ 1'22
+U-61.81
+T-61.81
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-49.85
+STax:Sales
+$-2.99
+SDining:Tip
+$-8.97
+^
+D6/ 2'22
+U-75.54
+T-75.54
+CX
+PCorner Market
+LGroceries
+^
+D6/ 3'22
+U-42.72
+T-42.72
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D6/ 5'22
+U-49.27
+T-49.27
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/ 8'22
+U-74.07
+T-74.07
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D6/ 9'22
+U-156.30
+T-156.30
+CX
+PCorner Market
+LGroceries
+^
+D6/12'22
+U-21.02
+T-21.02
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D6/12'22
+U-100.69
+T-100.69
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-81.20
+STax:Sales
+$-4.87
+SDining:Tip
+$-14.62
+^
+D6/13'22
+U-48.41
+T-48.41
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-39.04
+STax:Sales
+$-2.34
+SDining:Tip
+$-7.03
+^
+D6/14'22
+U-40.03
+T-40.03
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/16'22
+U-127.02
+T-127.02
+CX
+PCorner Market
+LGroceries
+^
+D6/18'22
+U-75.52
+T-75.52
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-60.91
+STax:Sales
+$-3.65
+SDining:Tip
+$-10.96
+^
+D6/18'22
+U-114.43
+T-114.43
+CX
+PHardware Barn
+MSnow shovel
+L--Split--
+SHousehold:Home Improvement
+$-107.95
+STax:Sales
+$-6.48
+^
+D6/20'22
+U-60.90
+T-60.90
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-49.11
+STax:Sales
+$-2.95
+SDining:Tip
+$-8.84
+^
+D6/20'22
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D6/23'22
+U-136.93
+T-136.93
+CX
+PCorner Market
+LGroceries
+^
+D6/25'22
+U1,262.93
+T1,262.93
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D6/27'22
+U-28.27
+T-28.27
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/ 1'22
+U-44.40
+T-44.40
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/ 1'22
+U-62.66
+T-62.66
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-50.53
+STax:Sales
+$-3.03
+SDining:Tip
+$-9.10
+^
+D7/ 2'22
+U-116.29
+T-116.29
+CX
+PCorner Market
+LGroceries
+^
+D7/ 3'22
+U-42.88
+T-42.88
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D7/ 3'22
+U-88.98
+T-88.98
+CX
+PHardware Barn
+MGarden hose
+L--Split--
+SHousehold:Home Improvement
+$-83.94
+STax:Sales
+$-5.04
+^
+D7/ 4'22
+U-34.08
+T-34.08
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/ 6'22
+U-71.53
+T-71.53
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-57.69
+STax:Sales
+$-3.46
+SDining:Tip
+$-10.38
+^
+D7/ 8'22
+U-73.97
+T-73.97
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D7/ 8'22
+U-19.30
+T-19.30
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-15.57
+STax:Sales
+$-0.93
+SDining:Tip
+$-2.80
+^
+D7/ 9'22
+U-62.93
+T-62.93
+CX
+PCorner Market
+LGroceries
+^
+D7/12'22
+U-23.23
+T-23.23
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D7/16'22
+U-138.23
+T-138.23
+CX
+PCorner Market
+LGroceries
+^
+D7/17'22
+U-42.22
+T-42.22
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/18'22
+U-16.72
+T-16.72
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-13.48
+STax:Sales
+$-0.81
+SDining:Tip
+$-2.43
+^
+D7/23'22
+U-140.81
+T-140.81
+CX
+PCorner Market
+LGroceries
+^
+D7/24'22
+U-17.85
+T-17.85
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-14.40
+STax:Sales
+$-0.86
+SDining:Tip
+$-2.59
+^
+D7/25'22
+U996.08
+T996.08
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D8/ 2'22
+U-113.91
+T-113.91
+CX
+PCorner Market
+LGroceries
+^
+D8/ 3'22
+U-49.05
+T-49.05
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D8/ 3'22
+U-31.10
+T-31.10
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/ 8'22
+U-127.98
+T-127.98
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D8/ 8'22
+U-99.18
+T-99.18
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-79.98
+STax:Sales
+$-4.80
+SDining:Tip
+$-14.40
+^
+D8/ 9'22
+U-68.99
+T-68.99
+CX
+PCorner Market
+LGroceries
+^
+D8/ 9'22
+U-89.01
+T-89.01
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-71.78
+STax:Sales
+$-4.31
+SDining:Tip
+$-12.92
+^
+D8/11'22
+U-44.04
+T-44.04
+CX
+PHardware Barn
+MCaulk and weatherstripping
+L--Split--
+SHousehold:Home Improvement
+$-41.55
+STax:Sales
+$-2.49
+^
+D8/12'22
+U-28.57
+T-28.57
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D8/14'22
+U-47.86
+T-47.86
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/14'22
+U-500.00
+T-500.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D8/15'22
+U-48.27
+T-48.27
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/16'22
+U-73.04
+T-73.04
+CX
+PCorner Market
+LGroceries
+^
+D8/17'22
+U-27.69
+T-27.69
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-22.33
+STax:Sales
+$-1.34
+SDining:Tip
+$-4.02
+^
+D8/20'22
+U-15.03
+T-15.03
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-12.12
+STax:Sales
+$-0.73
+SDining:Tip
+$-2.18
+^
+D8/23'22
+U-122.48
+T-122.48
+CX
+PCorner Market
+LGroceries
+^
+D8/23'22
+U-52.29
+T-52.29
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-42.17
+STax:Sales
+$-2.53
+SDining:Tip
+$-7.59
+^
+D8/25'22
+U1,538.49
+T1,538.49
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D9/ 1'22
+U-79.76
+T-79.76
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-64.32
+STax:Sales
+$-3.86
+SDining:Tip
+$-11.58
+^
+D9/ 2'22
+U-63.58
+T-63.58
+CX
+PCorner Market
+LGroceries
+^
+D9/ 3'22
+U-54.57
+T-54.57
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D9/ 3'22
+U-51.43
+T-51.43
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/ 5'22
+U-70.62
+T-70.62
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-56.95
+STax:Sales
+$-3.42
+SDining:Tip
+$-10.25
+^
+D9/ 8'22
+U-117.62
+T-117.62
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D9/ 8'22
+U-86.86
+T-86.86
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-70.05
+STax:Sales
+$-4.20
+SDining:Tip
+$-12.61
+^
+D9/ 9'22
+U-119.11
+T-119.11
+CX
+PCorner Market
+LGroceries
+^
+D9/ 9'22
+U-100.67
+T-100.67
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-81.19
+STax:Sales
+$-4.87
+SDining:Tip
+$-14.61
+^
+D9/12'22
+U-21.35
+T-21.35
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D9/16'22
+U-74.19
+T-74.19
+CX
+PCorner Market
+LGroceries
+^
+D9/18'22
+U-15.00
+T-15.00
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-12.09
+STax:Sales
+$-0.73
+SDining:Tip
+$-2.18
+^
+D9/19'22
+U-45.29
+T-45.29
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/20'22
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D9/23'22
+U-68.16
+T-68.16
+CX
+PCorner Market
+LGroceries
+^
+D9/24'22
+U-121.32
+T-121.32
+CX
+PHardware Barn
+MDeck screws, wood glue
+L--Split--
+SHousehold:Home Improvement
+$-114.45
+STax:Sales
+$-6.87
+^
+D9/25'22
+U-34.41
+T-34.41
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/25'22
+U1,173.94
+T1,173.94
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D10/ 2'22
+U-135.80
+T-135.80
+CX
+PCorner Market
+LGroceries
+^
+D10/ 3'22
+U-48.16
+T-48.16
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D10/ 4'22
+U-36.24
+T-36.24
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-29.23
+STax:Sales
+$-1.75
+SDining:Tip
+$-5.26
+^
+D10/ 8'22
+U-67.96
+T-67.96
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D10/ 9'22
+U-108.02
+T-108.02
+CX
+PCorner Market
+LGroceries
+^
+D10/11'22
+U-29.63
+T-29.63
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/12'22
+U-27.00
+T-27.00
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D10/13'22
+U-45.69
+T-45.69
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/16'22
+U-133.57
+T-133.57
+CX
+PCorner Market
+LGroceries
+^
+D10/16'22
+U-96.46
+T-96.46
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-77.79
+STax:Sales
+$-4.67
+SDining:Tip
+$-14.00
+^
+D10/17'22
+U-36.47
+T-36.47
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/20'22
+U-86.18
+T-86.18
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-69.50
+STax:Sales
+$-4.17
+SDining:Tip
+$-12.51
+^
+D10/21'22
+U-18.46
+T-18.46
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-14.89
+STax:Sales
+$-0.89
+SDining:Tip
+$-2.68
+^
+D10/23'22
+U-124.59
+T-124.59
+CX
+PCorner Market
+LGroceries
+^
+D10/24'22
+U-57.05
+T-57.05
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-46.01
+STax:Sales
+$-2.76
+SDining:Tip
+$-8.28
+^
+D10/25'22
+U1,051.28
+T1,051.28
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D11/ 2'22
+U-70.48
+T-70.48
+CX
+PCorner Market
+LGroceries
+^
+D11/ 3'22
+U-42.49
+T-42.49
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D11/ 6'22
+U-22.32
+T-22.32
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-18.00
+STax:Sales
+$-1.08
+SDining:Tip
+$-3.24
+^
+D11/ 7'22
+U-43.14
+T-43.14
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/ 8'22
+U-109.95
+T-109.95
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D11/ 8'22
+U-28.86
+T-28.86
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/ 9'22
+U-96.11
+T-96.11
+CX
+PCorner Market
+LGroceries
+^
+D11/11'22
+U-25.22
+T-25.22
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-20.34
+STax:Sales
+$-1.22
+SDining:Tip
+$-3.66
+^
+D11/12'22
+U-164.11
+T-164.11
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D11/13'22
+U-93.81
+T-93.81
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-75.65
+STax:Sales
+$-4.54
+SDining:Tip
+$-13.62
+^
+D11/14'22
+U-24.66
+T-24.66
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-19.89
+STax:Sales
+$-1.19
+SDining:Tip
+$-3.58
+^
+D11/16'22
+U-104.03
+T-104.03
+CX
+PCorner Market
+LGroceries
+^
+D11/22'22
+U-35.95
+T-35.95
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-28.99
+STax:Sales
+$-1.74
+SDining:Tip
+$-5.22
+^
+D11/23'22
+U-154.49
+T-154.49
+CX
+PCorner Market
+LGroceries
+^
+D11/25'22
+U1,066.95
+T1,066.95
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D11/26'22
+U-51.33
+T-51.33
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/ 2'22
+U-127.02
+T-127.02
+CX
+PCorner Market
+LGroceries
+^
+D12/ 3'22
+U-39.40
+T-39.40
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D12/ 8'22
+U-133.13
+T-133.13
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D12/ 9'22
+U-101.80
+T-101.80
+CX
+PCorner Market
+LGroceries
+^
+D12/11'22
+U-61.46
+T-61.46
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-49.57
+STax:Sales
+$-2.97
+SDining:Tip
+$-8.92
+^
+D12/12'22
+U-125.35
+T-125.35
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D12/13'22
+U-24.34
+T-24.34
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-19.63
+STax:Sales
+$-1.18
+SDining:Tip
+$-3.53
+^
+D12/14'22
+U-89.84
+T-89.84
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-72.45
+STax:Sales
+$-4.35
+SDining:Tip
+$-13.04
+^
+D12/16'22
+U-98.63
+T-98.63
+CX
+PCorner Market
+LGroceries
+^
+D12/16'22
+U-50.94
+T-50.94
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/17'22
+U-29.07
+T-29.07
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/17'22
+U-14.07
+T-14.07
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-11.35
+STax:Sales
+$-0.68
+SDining:Tip
+$-2.04
+^
+D12/20'22
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D12/22'22
+U-27.33
+T-27.33
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-22.04
+STax:Sales
+$-1.32
+SDining:Tip
+$-3.97
+^
+D12/23'22
+U-149.95
+T-149.95
+CX
+PCorner Market
+LGroceries
+^
+D12/25'22
+U-15.93
+T-15.93
+CX
+PHardware Barn
+MLawn mower blade
+L--Split--
+SHousehold:Home Improvement
+$-15.03
+STax:Sales
+$-0.90
+^
+D12/25'22
+U1,182.30
+T1,182.30
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D12/27'22
+U-44.04
+T-44.04
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/ 2'23
+U-150.00
+T-150.00
+CX
+PCorner Market
+LGroceries
+^
+D1/ 3'23
+U-49.99
+T-49.99
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D1/ 3'23
+U-38.63
+T-38.63
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/ 7'23
+U-48.30
+T-48.30
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/ 8'23
+U-108.87
+T-108.87
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D1/ 9'23
+U-92.70
+T-92.70
+CX
+PCorner Market
+LGroceries
+^
+D1/10'23
+U-18.53
+T-18.53
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-14.94
+STax:Sales
+$-0.90
+SDining:Tip
+$-2.69
+^
+D1/12'23
+U-179.63
+T-179.63
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D1/14'23
+U-85.95
+T-85.95
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-69.31
+STax:Sales
+$-4.16
+SDining:Tip
+$-12.48
+^
+D1/16'23
+U-101.41
+T-101.41
+CX
+PCorner Market
+LGroceries
+^
+D1/17'23
+U-41.07
+T-41.07
+CX
+PHeating Parts Online
+MFurnace igniter, part 41-409
+L--Split--
+SHousehold:Home Improvement
+EHot surface igniter
+$-38.75
+STax:Sales
+$-2.32
+^
+D1/19'23
+U-104.98
+T-104.98
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-84.66
+STax:Sales
+$-5.08
+SDining:Tip
+$-15.24
+^
+D1/21'23
+U-18.47
+T-18.47
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-14.90
+STax:Sales
+$-0.89
+SDining:Tip
+$-2.68
+^
+D1/23'23
+U-111.29
+T-111.29
+CX
+PCorner Market
+LGroceries
+^
+D1/23'23
+U-44.01
+T-44.01
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/24'23
+U-70.05
+T-70.05
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-56.49
+STax:Sales
+$-3.39
+SDining:Tip
+$-10.17
+^
+D1/25'23
+U1,263.88
+T1,263.88
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D2/ 2'23
+U-104.94
+T-104.94
+CX
+PCorner Market
+LGroceries
+^
+D2/ 2'23
+U-24.46
+T-24.46
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-19.73
+STax:Sales
+$-1.18
+SDining:Tip
+$-3.55
+^
+D2/ 3'23
+U-49.44
+T-49.44
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D2/ 3'23
+U-30.90
+T-30.90
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/ 3'23
+U-26.13
+T-26.13
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-21.08
+STax:Sales
+$-1.26
+SDining:Tip
+$-3.79
+^
+D2/ 6'23
+U-34.66
+T-34.66
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/ 8'23
+U-89.85
+T-89.85
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D2/ 9'23
+U-148.93
+T-148.93
+CX
+PCorner Market
+LGroceries
+^
+D2/12'23
+U-176.27
+T-176.27
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D2/12'23
+U-13.40
+T-13.40
+CX
+PHardware Barn
+MDeck screws, wood glue
+L--Split--
+SHousehold:Home Improvement
+$-12.64
+STax:Sales
+$-0.76
+^
+D2/14'23
+U-515.00
+T-515.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D2/15'23
+U-51.42
+T-51.42
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-41.47
+STax:Sales
+$-2.49
+SDining:Tip
+$-7.46
+^
+D2/16'23
+U-133.82
+T-133.82
+CX
+PCorner Market
+LGroceries
+^
+D2/23'23
+U-103.97
+T-103.97
+CX
+PCorner Market
+LGroceries
+^
+D2/24'23
+U-95.00
+T-95.00
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-76.61
+STax:Sales
+$-4.60
+SDining:Tip
+$-13.79
+^
+D2/25'23
+U-64.94
+T-64.94
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-52.37
+STax:Sales
+$-3.14
+SDining:Tip
+$-9.43
+^
+D2/25'23
+U1,698.74
+T1,698.74
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D2/26'23
+U-35.61
+T-35.61
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/ 2'23
+U-60.12
+T-60.12
+CX
+PCorner Market
+LGroceries
+^
+D3/ 3'23
+U-41.94
+T-41.94
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D3/ 3'23
+U-94.31
+T-94.31
+CX
+PHardware Barn
+MFurnace filters
+L--Split--
+SHousehold:Home Improvement
+$-88.97
+STax:Sales
+$-5.34
+^
+D3/ 4'23
+U-101.45
+T-101.45
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-81.81
+STax:Sales
+$-4.91
+SDining:Tip
+$-14.73
+^
+D3/ 5'23
+U-27.20
+T-27.20
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-21.93
+STax:Sales
+$-1.32
+SDining:Tip
+$-3.95
+^
+D3/ 8'23
+U-108.31
+T-108.31
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D3/ 9'23
+U-159.10
+T-159.10
+CX
+PCorner Market
+LGroceries
+^
+D3/ 9'23
+U-46.52
+T-46.52
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/ 9'23
+U-24.75
+T-24.75
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-19.96
+STax:Sales
+$-1.20
+SDining:Tip
+$-3.59
+^
+D3/10'23
+U-668.00
+T-668.00
+CX
+PExample Mutual Insurance
+MPolicy HO-000123, annual premium
+LInsurance:Homeowner's
+^
+D3/12'23
+U-90.37
+T-90.37
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D3/13'23
+U-101.77
+T-101.77
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-82.08
+STax:Sales
+$-4.92
+SDining:Tip
+$-14.77
+^
+D3/16'23
+U-127.53
+T-127.53
+CX
+PCorner Market
+LGroceries
+^
+D3/20'23
+U-31.77
+T-31.77
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/20'23
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D3/22'23
+U-40.85
+T-40.85
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/23'23
+U-155.02
+T-155.02
+CX
+PCorner Market
+LGroceries
+^
+D3/23'23
+U-26.03
+T-26.03
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-20.99
+STax:Sales
+$-1.26
+SDining:Tip
+$-3.78
+^
+D3/25'23
+U1,955.04
+T1,955.04
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D4/ 2'23
+U-145.84
+T-145.84
+CX
+PCorner Market
+LGroceries
+^
+D4/ 2'23
+U-85.61
+T-85.61
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-69.04
+STax:Sales
+$-4.14
+SDining:Tip
+$-12.43
+^
+D4/ 3'23
+U-48.88
+T-48.88
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D4/ 4'23
+U-89.15
+T-89.15
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-71.90
+STax:Sales
+$-4.31
+SDining:Tip
+$-12.94
+^
+D4/ 7'23
+U-39.16
+T-39.16
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/ 8'23
+U-104.05
+T-104.05
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D4/ 9'23
+U-81.80
+T-81.80
+CX
+PCorner Market
+LGroceries
+^
+D4/11'23
+U-35.63
+T-35.63
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-28.74
+STax:Sales
+$-1.72
+SDining:Tip
+$-5.17
+^
+D4/12'23
+U-24.15
+T-24.15
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D4/12'23
+U-40.82
+T-40.82
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/16'23
+U-150.61
+T-150.61
+CX
+PCorner Market
+LGroceries
+^
+D4/18'23
+U-55.03
+T-55.03
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-44.38
+STax:Sales
+$-2.66
+SDining:Tip
+$-7.99
+^
+D4/23'23
+U-69.38
+T-69.38
+CX
+PCorner Market
+LGroceries
+^
+D4/25'23
+U1,061.34
+T1,061.34
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D4/26'23
+U-40.39
+T-40.39
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/26'23
+U-50.84
+T-50.84
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-41.00
+STax:Sales
+$-2.46
+SDining:Tip
+$-7.38
+^
+D5/ 2'23
+U-91.31
+T-91.31
+CX
+PCorner Market
+LGroceries
+^
+D5/ 3'23
+U-53.68
+T-53.68
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D5/ 3'23
+U-37.86
+T-37.86
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/ 7'23
+U-39.19
+T-39.19
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/ 8'23
+U-131.66
+T-131.66
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D5/ 9'23
+U-137.78
+T-137.78
+CX
+PCorner Market
+LGroceries
+^
+D5/12'23
+U-33.15
+T-33.15
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D5/16'23
+U-124.57
+T-124.57
+CX
+PCorner Market
+LGroceries
+^
+D5/16'23
+U-35.25
+T-35.25
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-28.42
+STax:Sales
+$-1.71
+SDining:Tip
+$-5.12
+^
+D5/17'23
+U-20.32
+T-20.32
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-16.39
+STax:Sales
+$-0.98
+SDining:Tip
+$-2.95
+^
+D5/21'23
+U-51.51
+T-51.51
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-41.54
+STax:Sales
+$-2.49
+SDining:Tip
+$-7.48
+^
+D5/23'23
+U-103.75
+T-103.75
+CX
+PCorner Market
+LGroceries
+^
+D5/24'23
+U-42.02
+T-42.02
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/25'23
+U940.00
+T940.00
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D5/26'23
+U-18.38
+T-18.38
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-14.82
+STax:Sales
+$-0.89
+SDining:Tip
+$-2.67
+^
+D5/27'23
+U-19.57
+T-19.57
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-15.78
+STax:Sales
+$-0.95
+SDining:Tip
+$-2.84
+^
+D6/ 2'23
+U-153.10
+T-153.10
+CX
+PCorner Market
+LGroceries
+^
+D6/ 3'23
+U-38.97
+T-38.97
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D6/ 6'23
+U-46.28
+T-46.28
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/ 8'23
+U-87.11
+T-87.11
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D6/ 9'23
+U-63.76
+T-63.76
+CX
+PCorner Market
+LGroceries
+^
+D6/ 9'23
+U-51.21
+T-51.21
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/11'23
+U-74.20
+T-74.20
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-59.84
+STax:Sales
+$-3.59
+SDining:Tip
+$-10.77
+^
+D6/12'23
+U-19.32
+T-19.32
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D6/16'23
+U-94.81
+T-94.81
+CX
+PCorner Market
+LGroceries
+^
+D6/20'23
+U-90.47
+T-90.47
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-72.96
+STax:Sales
+$-4.38
+SDining:Tip
+$-13.13
+^
+D6/20'23
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D6/21'23
+U-21.93
+T-21.93
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-17.69
+STax:Sales
+$-1.06
+SDining:Tip
+$-3.18
+^
+D6/22'23
+U-28.53
+T-28.53
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/23'23
+U-142.55
+T-142.55
+CX
+PCorner Market
+LGroceries
+^
+D6/24'23
+U-76.83
+T-76.83
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-61.96
+STax:Sales
+$-3.72
+SDining:Tip
+$-11.15
+^
+D6/25'23
+U-79.75
+T-79.75
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-64.31
+STax:Sales
+$-3.86
+SDining:Tip
+$-11.58
+^
+D6/25'23
+U1,118.82
+T1,118.82
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D7/ 2'23
+U-155.08
+T-155.08
+CX
+PCorner Market
+LGroceries
+^
+D7/ 3'23
+U-49.72
+T-49.72
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D7/ 3'23
+U-76.18
+T-76.18
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-61.43
+STax:Sales
+$-3.69
+SDining:Tip
+$-11.06
+^
+D7/ 7'23
+U-75.99
+T-75.99
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-61.28
+STax:Sales
+$-3.68
+SDining:Tip
+$-11.03
+^
+D7/ 8'23
+U-101.26
+T-101.26
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D7/ 8'23
+U-14.42
+T-14.42
+CX
+PHardware Barn
+MLawn mower blade
+L--Split--
+SHousehold:Home Improvement
+$-13.60
+STax:Sales
+$-0.82
+^
+D7/ 9'23
+U-92.29
+T-92.29
+CX
+PCorner Market
+LGroceries
+^
+D7/ 9'23
+U-37.09
+T-37.09
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/12'23
+U-21.98
+T-21.98
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D7/12'23
+U-50.95
+T-50.95
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/16'23
+U-155.49
+T-155.49
+CX
+PCorner Market
+LGroceries
+^
+D7/19'23
+U-31.52
+T-31.52
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/20'23
+U-22.86
+T-22.86
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-18.43
+STax:Sales
+$-1.11
+SDining:Tip
+$-3.32
+^
+D7/21'23
+U-19.56
+T-19.56
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-15.77
+STax:Sales
+$-0.95
+SDining:Tip
+$-2.84
+^
+D7/23'23
+U-80.42
+T-80.42
+CX
+PCorner Market
+LGroceries
+^
+D7/25'23
+U1,002.56
+T1,002.56
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D7/27'23
+U-17.75
+T-17.75
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-14.31
+STax:Sales
+$-0.86
+SDining:Tip
+$-2.58
+^
+D8/ 2'23
+U-82.01
+T-82.01
+CX
+PCorner Market
+LGroceries
+^
+D8/ 3'23
+U-52.68
+T-52.68
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D8/ 3'23
+U-43.81
+T-43.81
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/ 5'23
+U-50.04
+T-50.04
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-40.36
+STax:Sales
+$-2.42
+SDining:Tip
+$-7.26
+^
+D8/ 6'23
+U-29.72
+T-29.72
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-23.97
+STax:Sales
+$-1.44
+SDining:Tip
+$-4.31
+^
+D8/ 8'23
+U-122.73
+T-122.73
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D8/ 9'23
+U-82.29
+T-82.29
+CX
+PCorner Market
+LGroceries
+^
+D8/ 9'23
+U-44.16
+T-44.16
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/11'23
+U-49.83
+T-49.83
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/11'23
+U-91.40
+T-91.40
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-73.71
+STax:Sales
+$-4.42
+SDining:Tip
+$-13.27
+^
+D8/12'23
+U-32.18
+T-32.18
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D8/14'23
+U-515.00
+T-515.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D8/16'23
+U-74.08
+T-74.08
+CX
+PCorner Market
+LGroceries
+^
+D8/16'23
+U-62.04
+T-62.04
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-50.03
+STax:Sales
+$-3.00
+SDining:Tip
+$-9.01
+^
+D8/19'23
+U-65.43
+T-65.43
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-52.76
+STax:Sales
+$-3.17
+SDining:Tip
+$-9.50
+^
+D8/22'23
+U-85.99
+T-85.99
+CX
+PHardware Barn
+MFurnace filters
+L--Split--
+SHousehold:Home Improvement
+$-81.12
+STax:Sales
+$-4.87
+^
+D8/23'23
+U-85.85
+T-85.85
+CX
+PCorner Market
+LGroceries
+^
+D8/25'23
+U1,569.24
+T1,569.24
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D9/ 2'23
+U-76.45
+T-76.45
+CX
+PCorner Market
+LGroceries
+^
+D9/ 3'23
+U-50.38
+T-50.38
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D9/ 3'23
+U-23.65
+T-23.65
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-19.08
+STax:Sales
+$-1.14
+SDining:Tip
+$-3.43
+^
+D9/ 3'23
+U-19.78
+T-19.78
+CX
+PHardware Barn
+MShelf brackets
+L--Split--
+SHousehold:Home Improvement
+$-18.66
+STax:Sales
+$-1.12
+^
+D9/ 6'23
+U-25.78
+T-25.78
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-20.79
+STax:Sales
+$-1.25
+SDining:Tip
+$-3.74
+^
+D9/ 7'23
+U-49.80
+T-49.80
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/ 8'23
+U-80.04
+T-80.04
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D9/ 8'23
+U-42.71
+T-42.71
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/ 8'23
+U-59.24
+T-59.24
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-47.77
+STax:Sales
+$-2.87
+SDining:Tip
+$-8.60
+^
+D9/ 9'23
+U-117.98
+T-117.98
+CX
+PCorner Market
+LGroceries
+^
+D9/12'23
+U-26.27
+T-26.27
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D9/14'23
+U-39.20
+T-39.20
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/14'23
+U-88.05
+T-88.05
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-71.01
+STax:Sales
+$-4.26
+SDining:Tip
+$-12.78
+^
+D9/16'23
+U-143.57
+T-143.57
+CX
+PCorner Market
+LGroceries
+^
+D9/20'23
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D9/23'23
+U-146.68
+T-146.68
+CX
+PCorner Market
+LGroceries
+^
+D9/24'23
+U-54.25
+T-54.25
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-43.75
+STax:Sales
+$-2.62
+SDining:Tip
+$-7.88
+^
+D9/25'23
+U1,093.83
+T1,093.83
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D10/ 2'23
+U-117.01
+T-117.01
+CX
+PCorner Market
+LGroceries
+^
+D10/ 3'23
+U-48.78
+T-48.78
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D10/ 3'23
+U-43.39
+T-43.39
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/ 3'23
+U-26.64
+T-26.64
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-21.48
+STax:Sales
+$-1.29
+SDining:Tip
+$-3.87
+^
+D10/ 6'23
+U-40.59
+T-40.59
+CX
+PHardware Barn
+MLawn mower blade
+L--Split--
+SHousehold:Home Improvement
+$-38.29
+STax:Sales
+$-2.30
+^
+D10/ 8'23
+U-119.40
+T-119.40
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D10/ 9'23
+U-69.66
+T-69.66
+CX
+PCorner Market
+LGroceries
+^
+D10/ 9'23
+U-80.97
+T-80.97
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-65.30
+STax:Sales
+$-3.92
+SDining:Tip
+$-11.75
+^
+D10/12'23
+U-30.66
+T-30.66
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D10/12'23
+U-74.31
+T-74.31
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-59.92
+STax:Sales
+$-3.60
+SDining:Tip
+$-10.79
+^
+D10/15'23
+U-30.20
+T-30.20
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/16'23
+U-158.67
+T-158.67
+CX
+PCorner Market
+LGroceries
+^
+D10/18'23
+U-76.57
+T-76.57
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-61.75
+STax:Sales
+$-3.70
+SDining:Tip
+$-11.12
+^
+D10/20'23
+U-76.96
+T-76.96
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-62.07
+STax:Sales
+$-3.72
+SDining:Tip
+$-11.17
+^
+D10/21'23
+U-35.28
+T-35.28
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/23'23
+U-98.47
+T-98.47
+CX
+PCorner Market
+LGroceries
+^
+D10/25'23
+U1,127.56
+T1,127.56
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D11/ 2'23
+U-114.15
+T-114.15
+CX
+PCorner Market
+LGroceries
+^
+D11/ 2'23
+U-25.92
+T-25.92
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-20.91
+STax:Sales
+$-1.25
+SDining:Tip
+$-3.76
+^
+D11/ 3'23
+U-38.03
+T-38.03
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D11/ 8'23
+U-72.10
+T-72.10
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D11/ 9'23
+U-157.31
+T-157.31
+CX
+PCorner Market
+LGroceries
+^
+D11/12'23
+U-92.21
+T-92.21
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D11/14'23
+U-51.17
+T-51.17
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/14'23
+U-23.98
+T-23.98
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-19.34
+STax:Sales
+$-1.16
+SDining:Tip
+$-3.48
+^
+D11/15'23
+U-29.06
+T-29.06
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/16'23
+U-137.69
+T-137.69
+CX
+PCorner Market
+LGroceries
+^
+D11/17'23
+U-107.21
+T-107.21
+CX
+PHardware Barn
+MFurnace filters
+L--Split--
+SHousehold:Home Improvement
+$-101.14
+STax:Sales
+$-6.07
+^
+D11/18'23
+U-44.35
+T-44.35
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-35.76
+STax:Sales
+$-2.15
+SDining:Tip
+$-6.44
+^
+D11/20'23
+U-20.40
+T-20.40
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-16.45
+STax:Sales
+$-0.99
+SDining:Tip
+$-2.96
+^
+D11/22'23
+U-33.64
+T-33.64
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/22'23
+U-41.00
+T-41.00
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-33.07
+STax:Sales
+$-1.98
+SDining:Tip
+$-5.95
+^
+D11/23'23
+U-74.19
+T-74.19
+CX
+PCorner Market
+LGroceries
+^
+D11/25'23
+U1,062.41
+T1,062.41
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D12/ 1'23
+U-35.08
+T-35.08
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/ 2'23
+U-131.62
+T-131.62
+CX
+PCorner Market
+LGroceries
+^
+D12/ 3'23
+U-49.63
+T-49.63
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D12/ 5'23
+U-61.38
+T-61.38
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-49.50
+STax:Sales
+$-2.97
+SDining:Tip
+$-8.91
+^
+D12/ 8'23
+U-105.20
+T-105.20
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D12/ 9'23
+U-159.05
+T-159.05
+CX
+PCorner Market
+LGroceries
+^
+D12/10'23
+U-33.38
+T-33.38
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/12'23
+U-117.32
+T-117.32
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D12/15'23
+U-24.16
+T-24.16
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-19.48
+STax:Sales
+$-1.17
+SDining:Tip
+$-3.51
+^
+D12/16'23
+U-85.21
+T-85.21
+CX
+PCorner Market
+LGroceries
+^
+D12/16'23
+U-48.38
+T-48.38
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/16'23
+U-20.73
+T-20.73
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-16.72
+STax:Sales
+$-1.00
+SDining:Tip
+$-3.01
+^
+D12/20'23
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D12/23'23
+U-128.45
+T-128.45
+CX
+PCorner Market
+LGroceries
+^
+D12/24'23
+U-22.92
+T-22.92
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-18.48
+STax:Sales
+$-1.11
+SDining:Tip
+$-3.33
+^
+D12/25'23
+U1,151.59
+T1,151.59
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D12/26'23
+U-79.08
+T-79.08
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-63.77
+STax:Sales
+$-3.83
+SDining:Tip
+$-11.48
+^
+D1/ 2'24
+U-95.19
+T-95.19
+CX
+PCorner Market
+LGroceries
+^
+D1/ 2'24
+U-120.88
+T-120.88
+CX
+PHardware Barn
+MLawn mower blade
+L--Split--
+SHousehold:Home Improvement
+$-114.04
+STax:Sales
+$-6.84
+^
+D1/ 3'24
+U-46.80
+T-46.80
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D1/ 3'24
+U-29.60
+T-29.60
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-23.87
+STax:Sales
+$-1.43
+SDining:Tip
+$-4.30
+^
+D1/ 4'24
+U-19.55
+T-19.55
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-15.76
+STax:Sales
+$-0.95
+SDining:Tip
+$-2.84
+^
+D1/ 7'24
+U-48.69
+T-48.69
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/ 8'24
+U-129.02
+T-129.02
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D1/ 9'24
+U-77.23
+T-77.23
+CX
+PCorner Market
+LGroceries
+^
+D1/ 9'24
+U-44.16
+T-44.16
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/11'24
+U-103.66
+T-103.66
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-83.59
+STax:Sales
+$-5.02
+SDining:Tip
+$-15.05
+^
+D1/12'24
+U-173.41
+T-173.41
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D1/14'24
+U-21.23
+T-21.23
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-17.12
+STax:Sales
+$-1.03
+SDining:Tip
+$-3.08
+^
+D1/16'24
+U-83.58
+T-83.58
+CX
+PCorner Market
+LGroceries
+^
+D1/17'24
+U-43.89
+T-43.89
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-35.40
+STax:Sales
+$-2.12
+SDining:Tip
+$-6.37
+^
+D1/21'24
+U-49.16
+T-49.16
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/23'24
+U-118.12
+T-118.12
+CX
+PCorner Market
+LGroceries
+^
+D1/25'24
+U1,204.17
+T1,204.17
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D2/ 2'24
+U-87.36
+T-87.36
+CX
+PCorner Market
+LGroceries
+^
+D2/ 3'24
+U-45.12
+T-45.12
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D2/ 4'24
+U-48.63
+T-48.63
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/ 5'24
+U-31.81
+T-31.81
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/ 7'24
+U-83.77
+T-83.77
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-67.56
+STax:Sales
+$-4.05
+SDining:Tip
+$-12.16
+^
+D2/ 8'24
+U-86.73
+T-86.73
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D2/ 8'24
+U-24.73
+T-24.73
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-19.94
+STax:Sales
+$-1.20
+SDining:Tip
+$-3.59
+^
+D2/ 9'24
+U-135.42
+T-135.42
+CX
+PCorner Market
+LGroceries
+^
+D2/ 9'24
+U-15.07
+T-15.07
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-12.15
+STax:Sales
+$-0.73
+SDining:Tip
+$-2.19
+^
+D2/12'24
+U-165.90
+T-165.90
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D2/14'24
+U-530.00
+T-530.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D2/15'24
+U-22.76
+T-22.76
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-18.36
+STax:Sales
+$-1.10
+SDining:Tip
+$-3.30
+^
+D2/16'24
+U-116.94
+T-116.94
+CX
+PCorner Market
+LGroceries
+^
+D2/21'24
+U-40.84
+T-40.84
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/21'24
+U-89.22
+T-89.22
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-71.95
+STax:Sales
+$-4.32
+SDining:Tip
+$-12.95
+^
+D2/23'24
+U-90.15
+T-90.15
+CX
+PCorner Market
+LGroceries
+^
+D2/23'24
+U-95.00
+T-95.00
+CX
+PHardware Barn
+MDeck screws, wood glue
+L--Split--
+SHousehold:Home Improvement
+$-89.62
+STax:Sales
+$-5.38
+^
+D2/25'24
+U1,709.45
+T1,709.45
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D3/ 2'24
+U-104.09
+T-104.09
+CX
+PCorner Market
+LGroceries
+^
+D3/ 2'24
+U-45.62
+T-45.62
+CX
+PHardware Barn
+MSnow shovel
+L--Split--
+SHousehold:Home Improvement
+$-43.04
+STax:Sales
+$-2.58
+^
+D3/ 3'24
+U-53.56
+T-53.56
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D3/ 4'24
+U-31.99
+T-31.99
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/ 5'24
+U-98.92
+T-98.92
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-79.77
+STax:Sales
+$-4.79
+SDining:Tip
+$-14.36
+^
+D3/ 8'24
+U-91.82
+T-91.82
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D3/ 9'24
+U-80.31
+T-80.31
+CX
+PCorner Market
+LGroceries
+^
+D3/ 9'24
+U-45.35
+T-45.35
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/10'24
+U-696.00
+T-696.00
+CX
+PExample Mutual Insurance
+MPolicy HO-000123, annual premium
+LInsurance:Homeowner's
+^
+D3/12'24
+U-136.65
+T-136.65
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D3/15'24
+U-101.40
+T-101.40
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-81.77
+STax:Sales
+$-4.91
+SDining:Tip
+$-14.72
+^
+D3/16'24
+U-81.87
+T-81.87
+CX
+PCorner Market
+LGroceries
+^
+D3/20'24
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D3/22'24
+U-46.32
+T-46.32
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/22'24
+U-93.41
+T-93.41
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-75.33
+STax:Sales
+$-4.52
+SDining:Tip
+$-13.56
+^
+D3/23'24
+U-142.42
+T-142.42
+CX
+PCorner Market
+LGroceries
+^
+D3/25'24
+U-26.12
+T-26.12
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-21.07
+STax:Sales
+$-1.26
+SDining:Tip
+$-3.79
+^
+D3/25'24
+U1,995.73
+T1,995.73
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D3/27'24
+U-69.88
+T-69.88
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-56.36
+STax:Sales
+$-3.38
+SDining:Tip
+$-10.14
+^
+D4/ 2'24
+U-124.76
+T-124.76
+CX
+PCorner Market
+LGroceries
+^
+D4/ 2'24
+U-83.74
+T-83.74
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-67.53
+STax:Sales
+$-4.05
+SDining:Tip
+$-12.16
+^
+D4/ 3'24
+U-53.47
+T-53.47
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D4/ 3'24
+U-45.73
+T-45.73
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/ 4'24
+U-16.13
+T-16.13
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-13.01
+STax:Sales
+$-0.78
+SDining:Tip
+$-2.34
+^
+D4/ 8'24
+U-115.89
+T-115.89
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D4/ 9'24
+U-132.18
+T-132.18
+CX
+PCorner Market
+LGroceries
+^
+D4/12'24
+U-33.15
+T-33.15
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D4/16'24
+U-119.97
+T-119.97
+CX
+PCorner Market
+LGroceries
+^
+D4/16'24
+U-73.12
+T-73.12
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-58.97
+STax:Sales
+$-3.54
+SDining:Tip
+$-10.61
+^
+D4/19'24
+U-55.72
+T-55.72
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-44.93
+STax:Sales
+$-2.70
+SDining:Tip
+$-8.09
+^
+D4/23'24
+U-93.41
+T-93.41
+CX
+PCorner Market
+LGroceries
+^
+D4/24'24
+U-45.30
+T-45.30
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/25'24
+U-39.26
+T-39.26
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/25'24
+U1,102.50
+T1,102.50
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D4/27'24
+U-70.67
+T-70.67
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-56.99
+STax:Sales
+$-3.42
+SDining:Tip
+$-10.26
+^
+D5/ 2'24
+U-149.04
+T-149.04
+CX
+PCorner Market
+LGroceries
+^
+D5/ 2'24
+U-78.95
+T-78.95
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-63.67
+STax:Sales
+$-3.82
+SDining:Tip
+$-11.46
+^
+D5/ 3'24
+U-49.57
+T-49.57
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D5/ 6'24
+U-32.11
+T-32.11
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/ 6'24
+U-17.01
+T-17.01
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-13.72
+STax:Sales
+$-0.82
+SDining:Tip
+$-2.47
+^
+D5/ 8'24
+U-121.06
+T-121.06
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D5/ 9'24
+U-119.31
+T-119.31
+CX
+PCorner Market
+LGroceries
+^
+D5/ 9'24
+U-30.37
+T-30.37
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/12'24
+U-26.54
+T-26.54
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D5/15'24
+U-27.74
+T-27.74
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-22.37
+STax:Sales
+$-1.34
+SDining:Tip
+$-4.03
+^
+D5/16'24
+U-83.59
+T-83.59
+CX
+PCorner Market
+LGroceries
+^
+D5/16'24
+U-62.53
+T-62.53
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-50.42
+STax:Sales
+$-3.03
+SDining:Tip
+$-9.08
+^
+D5/18'24
+U-57.54
+T-57.54
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-46.41
+STax:Sales
+$-2.78
+SDining:Tip
+$-8.35
+^
+D5/20'24
+U-55.79
+T-55.79
+CX
+PHardware Barn
+MFurnace filters
+L--Split--
+SHousehold:Home Improvement
+$-52.63
+STax:Sales
+$-3.16
+^
+D5/21'24
+U-40.36
+T-40.36
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/23'24
+U-155.26
+T-155.26
+CX
+PCorner Market
+LGroceries
+^
+D5/25'24
+U1,106.77
+T1,106.77
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D6/ 1'24
+U-60.02
+T-60.02
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-48.41
+STax:Sales
+$-2.90
+SDining:Tip
+$-8.71
+^
+D6/ 2'24
+U-74.97
+T-74.97
+CX
+PCorner Market
+LGroceries
+^
+D6/ 3'24
+U-52.08
+T-52.08
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D6/ 4'24
+U-28.21
+T-28.21
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/ 4'24
+U-59.99
+T-59.99
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-48.38
+STax:Sales
+$-2.90
+SDining:Tip
+$-8.71
+^
+D6/ 5'24
+U-24.23
+T-24.23
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-19.54
+STax:Sales
+$-1.17
+SDining:Tip
+$-3.52
+^
+D6/ 7'24
+U-33.61
+T-33.61
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/ 8'24
+U-61.44
+T-61.44
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D6/ 9'24
+U-155.00
+T-155.00
+CX
+PCorner Market
+LGroceries
+^
+D6/12'24
+U-31.27
+T-31.27
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D6/16'24
+U-133.45
+T-133.45
+CX
+PCorner Market
+LGroceries
+^
+D6/16'24
+U-85.08
+T-85.08
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-68.61
+STax:Sales
+$-4.12
+SDining:Tip
+$-12.35
+^
+D6/20'24
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D6/21'24
+U-45.43
+T-45.43
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/22'24
+U-52.84
+T-52.84
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-42.61
+STax:Sales
+$-2.56
+SDining:Tip
+$-7.67
+^
+D6/23'24
+U-87.22
+T-87.22
+CX
+PCorner Market
+LGroceries
+^
+D6/24'24
+U-111.12
+T-111.12
+CX
+PHardware Barn
+MCaulk and weatherstripping
+L--Split--
+SHousehold:Home Improvement
+$-104.83
+STax:Sales
+$-6.29
+^
+D6/25'24
+U1,145.96
+T1,145.96
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D7/ 2'24
+U-109.18
+T-109.18
+CX
+PCorner Market
+LGroceries
+^
+D7/ 3'24
+U-45.51
+T-45.51
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D7/ 4'24
+U-49.13
+T-49.13
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-39.62
+STax:Sales
+$-2.38
+SDining:Tip
+$-7.13
+^
+D7/ 8'24
+U-63.07
+T-63.07
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D7/ 9'24
+U-112.70
+T-112.70
+CX
+PCorner Market
+LGroceries
+^
+D7/10'24
+U-87.11
+T-87.11
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-70.25
+STax:Sales
+$-4.22
+SDining:Tip
+$-12.64
+^
+D7/11'24
+U-31.24
+T-31.24
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/12'24
+U-31.32
+T-31.32
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D7/13'24
+U-77.01
+T-77.01
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-62.10
+STax:Sales
+$-3.73
+SDining:Tip
+$-11.18
+^
+D7/14'24
+U-18.16
+T-18.16
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-14.64
+STax:Sales
+$-0.88
+SDining:Tip
+$-2.64
+^
+D7/16'24
+U-74.08
+T-74.08
+CX
+PCorner Market
+LGroceries
+^
+D7/16'24
+U-24.82
+T-24.82
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-20.02
+STax:Sales
+$-1.20
+SDining:Tip
+$-3.60
+^
+D7/22'24
+U-45.90
+T-45.90
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/23'24
+U-149.65
+T-149.65
+CX
+PCorner Market
+LGroceries
+^
+D7/23'24
+U-67.62
+T-67.62
+CX
+PHardware Barn
+MDrill bits
+L--Split--
+SHousehold:Home Improvement
+$-63.79
+STax:Sales
+$-3.83
+^
+D7/25'24
+U1,035.60
+T1,035.60
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D7/26'24
+U-49.10
+T-49.10
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/ 1'24
+U-40.99
+T-40.99
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-33.06
+STax:Sales
+$-1.98
+SDining:Tip
+$-5.95
+^
+D8/ 2'24
+U-68.92
+T-68.92
+CX
+PCorner Market
+LGroceries
+^
+D8/ 2'24
+U-33.98
+T-33.98
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/ 3'24
+U-51.99
+T-51.99
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D8/ 6'24
+U-30.38
+T-30.38
+CX
+PHardware Barn
+MDeck screws, wood glue
+L--Split--
+SHousehold:Home Improvement
+$-28.66
+STax:Sales
+$-1.72
+^
+D8/ 8'24
+U-108.13
+T-108.13
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D8/ 9'24
+U-149.85
+T-149.85
+CX
+PCorner Market
+LGroceries
+^
+D8/12'24
+U-33.98
+T-33.98
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D8/12'24
+U-43.00
+T-43.00
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-34.68
+STax:Sales
+$-2.08
+SDining:Tip
+$-6.24
+^
+D8/14'24
+U-100.24
+T-100.24
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-80.84
+STax:Sales
+$-4.85
+SDining:Tip
+$-14.55
+^
+D8/14'24
+U-530.00
+T-530.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D8/15'24
+U-56.30
+T-56.30
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-45.41
+STax:Sales
+$-2.72
+SDining:Tip
+$-8.17
+^
+D8/16'24
+U-119.06
+T-119.06
+CX
+PCorner Market
+LGroceries
+^
+D8/22'24
+U-32.81
+T-32.81
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/23'24
+U-86.38
+T-86.38
+CX
+PCorner Market
+LGroceries
+^
+D8/25'24
+U1,539.63
+T1,539.63
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D8/26'24
+U-30.76
+T-30.76
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/26'24
+U-22.86
+T-22.86
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-18.43
+STax:Sales
+$-1.11
+SDining:Tip
+$-3.32
+^
+D9/ 2'24
+U-80.78
+T-80.78
+CX
+PCorner Market
+LGroceries
+^
+D9/ 3'24
+U-45.25
+T-45.25
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D9/ 3'24
+U-35.65
+T-35.65
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-28.75
+STax:Sales
+$-1.72
+SDining:Tip
+$-5.18
+^
+D9/ 7'24
+U-38.79
+T-38.79
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/ 8'24
+U-68.17
+T-68.17
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D9/ 9'24
+U-154.28
+T-154.28
+CX
+PCorner Market
+LGroceries
+^
+D9/11'24
+U-14.54
+T-14.54
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-11.73
+STax:Sales
+$-0.70
+SDining:Tip
+$-2.11
+^
+D9/12'24
+U-23.26
+T-23.26
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D9/14'24
+U-94.29
+T-94.29
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-76.04
+STax:Sales
+$-4.56
+SDining:Tip
+$-13.69
+^
+D9/15'24
+U-39.17
+T-39.17
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/16'24
+U-108.12
+T-108.12
+CX
+PCorner Market
+LGroceries
+^
+D9/20'24
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D9/22'24
+U-22.88
+T-22.88
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-18.45
+STax:Sales
+$-1.11
+SDining:Tip
+$-3.32
+^
+D9/23'24
+U-80.14
+T-80.14
+CX
+PCorner Market
+LGroceries
+^
+D9/25'24
+U-34.85
+T-34.85
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/25'24
+U913.81
+T913.81
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D9/26'24
+U-23.64
+T-23.64
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-19.07
+STax:Sales
+$-1.14
+SDining:Tip
+$-3.43
+^
+D10/ 2'24
+U-132.81
+T-132.81
+CX
+PCorner Market
+LGroceries
+^
+D10/ 2'24
+U-60.48
+T-60.48
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-48.77
+STax:Sales
+$-2.93
+SDining:Tip
+$-8.78
+^
+D10/ 3'24
+U-44.31
+T-44.31
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D10/ 6'24
+U-93.40
+T-93.40
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-75.32
+STax:Sales
+$-4.52
+SDining:Tip
+$-13.56
+^
+D10/ 7'24
+U-81.04
+T-81.04
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-65.36
+STax:Sales
+$-3.92
+SDining:Tip
+$-11.76
+^
+D10/ 8'24
+U-70.10
+T-70.10
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D10/ 9'24
+U-125.86
+T-125.86
+CX
+PCorner Market
+LGroceries
+^
+D10/ 9'24
+U-29.93
+T-29.93
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/12'24
+U-22.78
+T-22.78
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D10/14'24
+U-122.96
+T-122.96
+CX
+PHardware Barn
+MLight bulbs, outlet covers
+L--Split--
+SHousehold:Home Improvement
+$-116.00
+STax:Sales
+$-6.96
+^
+D10/16'24
+U-156.66
+T-156.66
+CX
+PCorner Market
+LGroceries
+^
+D10/17'24
+U-41.67
+T-41.67
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/19'24
+U-38.66
+T-38.66
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/20'24
+U-88.18
+T-88.18
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-71.11
+STax:Sales
+$-4.27
+SDining:Tip
+$-12.80
+^
+D10/22'24
+U-72.50
+T-72.50
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-58.47
+STax:Sales
+$-3.51
+SDining:Tip
+$-10.52
+^
+D10/23'24
+U-126.10
+T-126.10
+CX
+PCorner Market
+LGroceries
+^
+D10/25'24
+U1,307.44
+T1,307.44
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D11/ 2'24
+U-69.14
+T-69.14
+CX
+PCorner Market
+LGroceries
+^
+D11/ 3'24
+U-53.24
+T-53.24
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D11/ 8'24
+U-85.31
+T-85.31
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D11/ 9'24
+U-92.61
+T-92.61
+CX
+PCorner Market
+LGroceries
+^
+D11/12'24
+U-179.73
+T-179.73
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D11/13'24
+U-31.61
+T-31.61
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/13'24
+U-76.79
+T-76.79
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-61.92
+STax:Sales
+$-3.72
+SDining:Tip
+$-11.15
+^
+D11/14'24
+U-91.69
+T-91.69
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-73.94
+STax:Sales
+$-4.44
+SDining:Tip
+$-13.31
+^
+D11/15'24
+U-41.03
+T-41.03
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/16'24
+U-64.00
+T-64.00
+CX
+PCorner Market
+LGroceries
+^
+D11/20'24
+U-103.75
+T-103.75
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-83.67
+STax:Sales
+$-5.02
+SDining:Tip
+$-15.06
+^
+D11/21'24
+U-38.78
+T-38.78
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/22'24
+U-61.17
+T-61.17
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-49.33
+STax:Sales
+$-2.96
+SDining:Tip
+$-8.88
+^
+D11/23'24
+U-97.14
+T-97.14
+CX
+PCorner Market
+LGroceries
+^
+D11/25'24
+U1,159.21
+T1,159.21
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D11/27'24
+U-73.22
+T-73.22
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-59.05
+STax:Sales
+$-3.54
+SDining:Tip
+$-10.63
+^
+D12/ 2'24
+U-124.28
+T-124.28
+CX
+PCorner Market
+LGroceries
+^
+D12/ 3'24
+U-54.72
+T-54.72
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D12/ 6'24
+U-103.12
+T-103.12
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-83.16
+STax:Sales
+$-4.99
+SDining:Tip
+$-14.97
+^
+D12/ 7'24
+U-28.07
+T-28.07
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/ 8'24
+U-69.06
+T-69.06
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D12/ 8'24
+U-51.28
+T-51.28
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/ 8'24
+U-21.83
+T-21.83
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-17.60
+STax:Sales
+$-1.06
+SDining:Tip
+$-3.17
+^
+D12/ 9'24
+U-82.19
+T-82.19
+CX
+PCorner Market
+LGroceries
+^
+D12/ 9'24
+U-26.93
+T-26.93
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-21.72
+STax:Sales
+$-1.30
+SDining:Tip
+$-3.91
+^
+D12/12'24
+U-138.50
+T-138.50
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D12/12'24
+U-108.29
+T-108.29
+CX
+PHardware Barn
+MFurnace filters
+L--Split--
+SHousehold:Home Improvement
+$-102.16
+STax:Sales
+$-6.13
+^
+D12/16'24
+U-131.78
+T-131.78
+CX
+PCorner Market
+LGroceries
+^
+D12/16'24
+U-14.12
+T-14.12
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-11.39
+STax:Sales
+$-0.68
+SDining:Tip
+$-2.05
+^
+D12/20'24
+U-50.42
+T-50.42
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/20'24
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D12/23'24
+U-70.38
+T-70.38
+CX
+PCorner Market
+LGroceries
+^
+D12/24'24
+U-21.77
+T-21.77
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-17.56
+STax:Sales
+$-1.05
+SDining:Tip
+$-3.16
+^
+D12/25'24
+U1,146.74
+T1,146.74
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D1/ 2'25
+U-155.33
+T-155.33
+CX
+PCorner Market
+LGroceries
+^
+D1/ 2'25
+U-19.14
+T-19.14
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-15.43
+STax:Sales
+$-0.93
+SDining:Tip
+$-2.78
+^
+D1/ 3'25
+U-44.03
+T-44.03
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D1/ 5'25
+U-48.89
+T-48.89
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-39.42
+STax:Sales
+$-2.37
+SDining:Tip
+$-7.10
+^
+D1/ 8'25
+U-80.84
+T-80.84
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D1/ 9'25
+U-70.13
+T-70.13
+CX
+PCorner Market
+LGroceries
+^
+D1/12'25
+U-99.90
+T-99.90
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D1/12'25
+U-34.92
+T-34.92
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/13'25
+U-51.64
+T-51.64
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/14'25
+U-96.66
+T-96.66
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-77.95
+STax:Sales
+$-4.68
+SDining:Tip
+$-14.03
+^
+D1/16'25
+U-61.15
+T-61.15
+CX
+PCorner Market
+LGroceries
+^
+D1/23'25
+U-136.18
+T-136.18
+CX
+PCorner Market
+LGroceries
+^
+D1/24'25
+U-38.73
+T-38.73
+CX
+PGas & Go
+LAuto:Fuel
+^
+D1/25'25
+U-16.83
+T-16.83
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-13.58
+STax:Sales
+$-0.81
+SDining:Tip
+$-2.44
+^
+D1/25'25
+U1,032.92
+T1,032.92
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D1/26'25
+U-78.55
+T-78.55
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-63.35
+STax:Sales
+$-3.80
+SDining:Tip
+$-11.40
+^
+D2/ 2'25
+U-150.49
+T-150.49
+CX
+PCorner Market
+LGroceries
+^
+D2/ 3'25
+U-41.73
+T-41.73
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D2/ 4'25
+U-46.28
+T-46.28
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/ 8'25
+U-109.85
+T-109.85
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D2/ 9'25
+U-87.57
+T-87.57
+CX
+PCorner Market
+LGroceries
+^
+D2/ 9'25
+U-41.05
+T-41.05
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/12'25
+U-110.57
+T-110.57
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D2/14'25
+U-89.07
+T-89.07
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-71.83
+STax:Sales
+$-4.31
+SDining:Tip
+$-12.93
+^
+D2/14'25
+U-545.00
+T-545.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D2/16'25
+U-107.92
+T-107.92
+CX
+PCorner Market
+LGroceries
+^
+D2/16'25
+U-82.39
+T-82.39
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-66.44
+STax:Sales
+$-3.99
+SDining:Tip
+$-11.96
+^
+D2/17'25
+U-94.33
+T-94.33
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-76.08
+STax:Sales
+$-4.56
+SDining:Tip
+$-13.69
+^
+D2/19'25
+U-45.68
+T-45.68
+CX
+PGas & Go
+LAuto:Fuel
+^
+D2/23'25
+U-98.27
+T-98.27
+CX
+PCorner Market
+LGroceries
+^
+D2/23'25
+U-28.77
+T-28.77
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-23.20
+STax:Sales
+$-1.39
+SDining:Tip
+$-4.18
+^
+D2/25'25
+U-97.32
+T-97.32
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-78.48
+STax:Sales
+$-4.71
+SDining:Tip
+$-14.13
+^
+D2/25'25
+U1,776.29
+T1,776.29
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D3/ 2'25
+U-97.04
+T-97.04
+CX
+PCorner Market
+LGroceries
+^
+D3/ 3'25
+U-50.21
+T-50.21
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D3/ 8'25
+U-88.32
+T-88.32
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D3/ 9'25
+U-63.79
+T-63.79
+CX
+PCorner Market
+LGroceries
+^
+D3/10'25
+U-724.00
+T-724.00
+CX
+PExample Mutual Insurance
+MPolicy HO-000123, annual premium
+LInsurance:Homeowner's
+^
+D3/11'25
+U-42.44
+T-42.44
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/12'25
+U-105.71
+T-105.71
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D3/12'25
+U-49.13
+T-49.13
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/12'25
+U-49.55
+T-49.55
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-39.96
+STax:Sales
+$-2.40
+SDining:Tip
+$-7.19
+^
+D3/13'25
+U-82.24
+T-82.24
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-66.32
+STax:Sales
+$-3.98
+SDining:Tip
+$-11.94
+^
+D3/15'25
+U-116.97
+T-116.97
+CX
+PHardware Barn
+MPaint and rollers
+L--Split--
+SHousehold:Home Improvement
+$-110.35
+STax:Sales
+$-6.62
+^
+D3/16'25
+U-159.22
+T-159.22
+CX
+PCorner Market
+LGroceries
+^
+D3/19'25
+U-44.10
+T-44.10
+CX
+PGas & Go
+LAuto:Fuel
+^
+D3/19'25
+U-21.70
+T-21.70
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-17.50
+STax:Sales
+$-1.05
+SDining:Tip
+$-3.15
+^
+D3/20'25
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D3/21'25
+U-87.02
+T-87.02
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-70.18
+STax:Sales
+$-4.21
+SDining:Tip
+$-12.63
+^
+D3/23'25
+U-104.09
+T-104.09
+CX
+PCorner Market
+LGroceries
+^
+D3/25'25
+U1,958.28
+T1,958.28
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D3/27'25
+U-22.75
+T-22.75
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-18.35
+STax:Sales
+$-1.10
+SDining:Tip
+$-3.30
+^
+D4/ 2'25
+U-123.44
+T-123.44
+CX
+PCorner Market
+LGroceries
+^
+D4/ 3'25
+U-42.13
+T-42.13
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D4/ 3'25
+U-81.98
+T-81.98
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-66.11
+STax:Sales
+$-3.97
+SDining:Tip
+$-11.90
+^
+D4/ 6'25
+U-26.92
+T-26.92
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-21.71
+STax:Sales
+$-1.30
+SDining:Tip
+$-3.91
+^
+D4/ 8'25
+U-74.01
+T-74.01
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D4/ 9'25
+U-143.48
+T-143.48
+CX
+PCorner Market
+LGroceries
+^
+D4/11'25
+U-26.50
+T-26.50
+CX
+PHardware Barn
+MDrill bits
+L--Split--
+SHousehold:Home Improvement
+$-25.00
+STax:Sales
+$-1.50
+^
+D4/12'25
+U-22.06
+T-22.06
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D4/12'25
+U-25.37
+T-25.37
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-20.46
+STax:Sales
+$-1.23
+SDining:Tip
+$-3.68
+^
+D4/14'25
+U-55.76
+T-55.76
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-44.97
+STax:Sales
+$-2.70
+SDining:Tip
+$-8.09
+^
+D4/16'25
+U-98.73
+T-98.73
+CX
+PCorner Market
+LGroceries
+^
+D4/19'25
+U-49.24
+T-49.24
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/20'25
+U-48.81
+T-48.81
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/21'25
+U-28.05
+T-28.05
+CX
+PGas & Go
+LAuto:Fuel
+^
+D4/23'25
+U-78.64
+T-78.64
+CX
+PCorner Market
+LGroceries
+^
+D4/25'25
+U986.43
+T986.43
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D4/27'25
+U-61.31
+T-61.31
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-49.44
+STax:Sales
+$-2.97
+SDining:Tip
+$-8.90
+^
+D5/ 2'25
+U-68.56
+T-68.56
+CX
+PCorner Market
+LGroceries
+^
+D5/ 3'25
+U-44.25
+T-44.25
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D5/ 5'25
+U-79.42
+T-79.42
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-64.05
+STax:Sales
+$-3.84
+SDining:Tip
+$-11.53
+^
+D5/ 6'25
+U-47.73
+T-47.73
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/ 6'25
+U-17.01
+T-17.01
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-13.72
+STax:Sales
+$-0.82
+SDining:Tip
+$-2.47
+^
+D5/ 8'25
+U-125.68
+T-125.68
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D5/ 8'25
+U-31.24
+T-31.24
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/ 9'25
+U-136.78
+T-136.78
+CX
+PCorner Market
+LGroceries
+^
+D5/11'25
+U-26.60
+T-26.60
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-21.45
+STax:Sales
+$-1.29
+SDining:Tip
+$-3.86
+^
+D5/12'25
+U-21.73
+T-21.73
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D5/15'25
+U-14.69
+T-14.69
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-11.85
+STax:Sales
+$-0.71
+SDining:Tip
+$-2.13
+^
+D5/16'25
+U-143.88
+T-143.88
+CX
+PCorner Market
+LGroceries
+^
+D5/16'25
+U-32.35
+T-32.35
+CX
+PGas & Go
+LAuto:Fuel
+^
+D5/23'25
+U-97.08
+T-97.08
+CX
+PCorner Market
+LGroceries
+^
+D5/23'25
+U-74.57
+T-74.57
+CX
+PHardware Barn
+MCaulk and weatherstripping
+L--Split--
+SHousehold:Home Improvement
+$-70.35
+STax:Sales
+$-4.22
+^
+D5/25'25
+U-25.95
+T-25.95
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-20.92
+STax:Sales
+$-1.26
+SDining:Tip
+$-3.77
+^
+D5/25'25
+U987.52
+T987.52
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D6/ 2'25
+U-158.85
+T-158.85
+CX
+PCorner Market
+LGroceries
+^
+D6/ 2'25
+U-98.66
+T-98.66
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-79.57
+STax:Sales
+$-4.77
+SDining:Tip
+$-14.32
+^
+D6/ 3'25
+U-43.16
+T-43.16
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D6/ 4'25
+U-50.68
+T-50.68
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/ 5'25
+U-13.93
+T-13.93
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-11.24
+STax:Sales
+$-0.67
+SDining:Tip
+$-2.02
+^
+D6/ 8'25
+U-100.41
+T-100.41
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D6/ 9'25
+U-117.69
+T-117.69
+CX
+PCorner Market
+LGroceries
+^
+D6/11'25
+U-50.84
+T-50.84
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/12'25
+U-21.27
+T-21.27
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D6/13'25
+U-95.91
+T-95.91
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-77.35
+STax:Sales
+$-4.64
+SDining:Tip
+$-13.92
+^
+D6/16'25
+U-98.63
+T-98.63
+CX
+PCorner Market
+LGroceries
+^
+D6/18'25
+U-76.38
+T-76.38
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-61.59
+STax:Sales
+$-3.70
+SDining:Tip
+$-11.09
+^
+D6/20'25
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D6/22'25
+U-28.73
+T-28.73
+CX
+PGas & Go
+LAuto:Fuel
+^
+D6/23'25
+U-143.63
+T-143.63
+CX
+PCorner Market
+LGroceries
+^
+D6/25'25
+U1,208.70
+T1,208.70
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D6/27'25
+U-59.93
+T-59.93
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-48.33
+STax:Sales
+$-2.90
+SDining:Tip
+$-8.70
+^
+D7/ 2'25
+U-75.42
+T-75.42
+CX
+PCorner Market
+LGroceries
+^
+D7/ 3'25
+U-46.83
+T-46.83
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D7/ 6'25
+U-35.85
+T-35.85
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/ 6'25
+U-77.09
+T-77.09
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-62.17
+STax:Sales
+$-3.73
+SDining:Tip
+$-11.19
+^
+D7/ 7'25
+U-25.19
+T-25.19
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-20.31
+STax:Sales
+$-1.22
+SDining:Tip
+$-3.66
+^
+D7/ 8'25
+U-110.90
+T-110.90
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D7/ 9'25
+U-143.95
+T-143.95
+CX
+PCorner Market
+LGroceries
+^
+D7/11'25
+U-33.77
+T-33.77
+CX
+PGas & Go
+LAuto:Fuel
+^
+D7/12'25
+U-29.47
+T-29.47
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D7/15'25
+U-24.80
+T-24.80
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-20.00
+STax:Sales
+$-1.20
+SDining:Tip
+$-3.60
+^
+D7/16'25
+U-84.68
+T-84.68
+CX
+PCorner Market
+LGroceries
+^
+D7/19'25
+U-59.05
+T-59.05
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-47.62
+STax:Sales
+$-2.86
+SDining:Tip
+$-8.57
+^
+D7/21'25
+U-37.11
+T-37.11
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-29.92
+STax:Sales
+$-1.80
+SDining:Tip
+$-5.39
+^
+D7/23'25
+U-112.59
+T-112.59
+CX
+PCorner Market
+LGroceries
+^
+D7/25'25
+U-27.49
+T-27.49
+CX
+PHardware Barn
+MLight bulbs, outlet covers
+L--Split--
+SHousehold:Home Improvement
+$-25.93
+STax:Sales
+$-1.56
+^
+D7/25'25
+U970.89
+T970.89
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D7/26'25
+U-46.70
+T-46.70
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/ 2'25
+U-125.77
+T-125.77
+CX
+PCorner Market
+LGroceries
+^
+D8/ 3'25
+U-42.89
+T-42.89
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D8/ 3'25
+U-38.06
+T-38.06
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/ 7'25
+U-75.99
+T-75.99
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-61.28
+STax:Sales
+$-3.68
+SDining:Tip
+$-11.03
+^
+D8/ 8'25
+U-84.56
+T-84.56
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D8/ 9'25
+U-77.88
+T-77.88
+CX
+PCorner Market
+LGroceries
+^
+D8/10'25
+U-36.59
+T-36.59
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/10'25
+U-13.93
+T-13.93
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-11.24
+STax:Sales
+$-0.67
+SDining:Tip
+$-2.02
+^
+D8/12'25
+U-32.33
+T-32.33
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D8/14'25
+U-545.00
+T-545.00
+CX
+PExample Mutual Insurance
+MSix-month auto premium
+LAuto:Insurance
+^
+D8/16'25
+U-150.42
+T-150.42
+CX
+PCorner Market
+LGroceries
+^
+D8/19'25
+U-84.38
+T-84.38
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-68.05
+STax:Sales
+$-4.08
+SDining:Tip
+$-12.25
+^
+D8/20'25
+U-61.60
+T-61.60
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-49.68
+STax:Sales
+$-2.98
+SDining:Tip
+$-8.94
+^
+D8/23'25
+U-132.61
+T-132.61
+CX
+PCorner Market
+LGroceries
+^
+D8/23'25
+U-43.96
+T-43.96
+CX
+PGas & Go
+LAuto:Fuel
+^
+D8/24'25
+U-26.35
+T-26.35
+CX
+PTaqueria Azul
+L--Split--
+SDining:Lunch
+$-21.25
+STax:Sales
+$-1.28
+SDining:Tip
+$-3.82
+^
+D8/25'25
+U1,637.61
+T1,637.61
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D8/26'25
+U-65.29
+T-65.29
+CX
+PHardware Barn
+MPaint and rollers
+L--Split--
+SHousehold:Home Improvement
+$-61.59
+STax:Sales
+$-3.70
+^
+D9/ 1'25
+U-90.86
+T-90.86
+CX
+PHardware Barn
+MShelf brackets
+L--Split--
+SHousehold:Home Improvement
+$-85.72
+STax:Sales
+$-5.14
+^
+D9/ 2'25
+U-85.43
+T-85.43
+CX
+PCorner Market
+LGroceries
+^
+D9/ 3'25
+U-53.54
+T-53.54
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D9/ 6'25
+U-28.90
+T-28.90
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/ 7'25
+U-72.33
+T-72.33
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-58.33
+STax:Sales
+$-3.50
+SDining:Tip
+$-10.50
+^
+D9/ 8'25
+U-76.09
+T-76.09
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D9/ 9'25
+U-91.41
+T-91.41
+CX
+PCorner Market
+LGroceries
+^
+D9/ 9'25
+U-42.82
+T-42.82
+CX
+PGas & Go
+LAuto:Fuel
+^
+D9/ 9'25
+U-23.08
+T-23.08
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-18.61
+STax:Sales
+$-1.12
+SDining:Tip
+$-3.35
+^
+D9/12'25
+U-21.31
+T-21.31
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D9/13'25
+U-56.35
+T-56.35
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-45.44
+STax:Sales
+$-2.73
+SDining:Tip
+$-8.18
+^
+D9/16'25
+U-156.74
+T-156.74
+CX
+PCorner Market
+LGroceries
+^
+D9/18'25
+U-24.87
+T-24.87
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-20.06
+STax:Sales
+$-1.20
+SDining:Tip
+$-3.61
+^
+D9/20'25
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D9/22'25
+U-43.41
+T-43.41
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-35.01
+STax:Sales
+$-2.10
+SDining:Tip
+$-6.30
+^
+D9/23'25
+U-62.75
+T-62.75
+CX
+PCorner Market
+LGroceries
+^
+D9/25'25
+U1,023.26
+T1,023.26
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D9/27'25
+U-43.37
+T-43.37
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/ 2'25
+U-106.26
+T-106.26
+CX
+PCorner Market
+LGroceries
+^
+D10/ 3'25
+U-53.82
+T-53.82
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D10/ 5'25
+U-21.29
+T-21.29
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-17.17
+STax:Sales
+$-1.03
+SDining:Tip
+$-3.09
+^
+D10/ 7'25
+U-42.50
+T-42.50
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/ 8'25
+U-83.99
+T-83.99
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D10/ 9'25
+U-126.11
+T-126.11
+CX
+PCorner Market
+LGroceries
+^
+D10/12'25
+U-29.29
+T-29.29
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D10/15'25
+U-100.66
+T-100.66
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-81.18
+STax:Sales
+$-4.87
+SDining:Tip
+$-14.61
+^
+D10/16'25
+U-148.04
+T-148.04
+CX
+PCorner Market
+LGroceries
+^
+D10/21'25
+U-49.50
+T-49.50
+CX
+PGas & Go
+LAuto:Fuel
+^
+D10/21'25
+U-14.62
+T-14.62
+CX
+PPine Street Diner
+L--Split--
+SDining:Lunch
+$-11.79
+STax:Sales
+$-0.71
+SDining:Tip
+$-2.12
+^
+D10/22'25
+U-100.80
+T-100.80
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-81.29
+STax:Sales
+$-4.88
+SDining:Tip
+$-14.63
+^
+D10/23'25
+U-105.50
+T-105.50
+CX
+PCorner Market
+LGroceries
+^
+D10/23'25
+U-76.07
+T-76.07
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-61.35
+STax:Sales
+$-3.68
+SDining:Tip
+$-11.04
+^
+D10/25'25
+U1,105.48
+T1,105.48
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D10/26'25
+U-47.03
+T-47.03
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/ 1'25
+U-70.76
+T-70.76
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-57.07
+STax:Sales
+$-3.42
+SDining:Tip
+$-10.27
+^
+D11/ 2'25
+U-118.58
+T-118.58
+CX
+PCorner Market
+LGroceries
+^
+D11/ 2'25
+U-61.58
+T-61.58
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-49.66
+STax:Sales
+$-2.98
+SDining:Tip
+$-8.94
+^
+D11/ 3'25
+U-53.66
+T-53.66
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D11/ 8'25
+U-125.92
+T-125.92
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D11/ 9'25
+U-134.73
+T-134.73
+CX
+PCorner Market
+LGroceries
+^
+D11/11'25
+U-31.31
+T-31.31
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/12'25
+U-170.74
+T-170.74
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D11/12'25
+U-27.24
+T-27.24
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-21.97
+STax:Sales
+$-1.32
+SDining:Tip
+$-3.95
+^
+D11/16'25
+U-72.98
+T-72.98
+CX
+PCorner Market
+LGroceries
+^
+D11/18'25
+U-32.70
+T-32.70
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/19'25
+U-46.73
+T-46.73
+CX
+PGas & Go
+LAuto:Fuel
+^
+D11/23'25
+U-77.87
+T-77.87
+CX
+PCorner Market
+LGroceries
+^
+D11/23'25
+U-26.65
+T-26.65
+CX
+PLucky Noodle
+L--Split--
+SDining:Lunch
+$-21.49
+STax:Sales
+$-1.29
+SDining:Tip
+$-3.87
+^
+D11/25'25
+U1,120.11
+T1,120.11
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+D11/27'25
+U-68.66
+T-68.66
+CX
+PTaqueria Azul
+L--Split--
+SDining:Dinner
+$-55.37
+STax:Sales
+$-3.32
+SDining:Tip
+$-9.97
+^
+D12/ 1'25
+U-102.09
+T-102.09
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-82.33
+STax:Sales
+$-4.94
+SDining:Tip
+$-14.82
+^
+D12/ 2'25
+U-149.78
+T-149.78
+CX
+PCorner Market
+LGroceries
+^
+D12/ 2'25
+U-54.31
+T-54.31
+CX
+PLucky Noodle
+L--Split--
+SDining:Dinner
+$-43.80
+STax:Sales
+$-2.63
+SDining:Tip
+$-7.88
+^
+D12/ 3'25
+U-50.67
+T-50.67
+CX
+PCity Water Dept
+LUtilities:Water
+^
+D12/ 5'25
+U-43.28
+T-43.28
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Dinner
+$-34.91
+STax:Sales
+$-2.09
+SDining:Tip
+$-6.28
+^
+D12/ 6'25
+U-35.13
+T-35.13
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/ 8'25
+U-77.23
+T-77.23
+CX
+PLakeshore Electric
+LUtilities:Electric
+^
+D12/ 9'25
+U-158.76
+T-158.76
+CX
+PCorner Market
+LGroceries
+^
+D12/12'25
+U-93.71
+T-93.71
+CX
+PNorthern Gas Co
+LUtilities:Gas
+^
+D12/12'25
+U-93.01
+T-93.01
+CX
+PPine Street Diner
+L--Split--
+SDining:Dinner
+$-75.01
+STax:Sales
+$-4.50
+SDining:Tip
+$-13.50
+^
+D12/16'25
+U-62.04
+T-62.04
+CX
+PCorner Market
+LGroceries
+^
+D12/17'25
+U-31.28
+T-31.28
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/20'25
+U-50.00
+T-50.00
+CX
+PExample Food Bank
+LCharity/Tax Deduction
+^
+D12/22'25
+U-36.91
+T-36.91
+CX
+PGas & Go
+LAuto:Fuel
+^
+D12/23'25
+U-100.71
+T-100.71
+CX
+PCorner Market
+LGroceries
+^
+D12/25'25
+U-16.13
+T-16.13
+CX
+PThe Copper Kettle
+L--Split--
+SDining:Lunch
+$-13.01
+STax:Sales
+$-0.78
+SDining:Tip
+$-2.34
+^
+D12/25'25
+U1,155.04
+T1,155.04
+CX
+PVisa Payment
+MStatement balance
+L[Checking]
+^
+!Account
+NCar Loan
+TOth L
+^
+!Type:Oth L
+D1/ 1'21
+U-8,400.00
+T-8,400.00
+CX
+POpening Balance
+L[Car Loan]
+^
+D1/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D2/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D3/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D4/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D5/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D6/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D7/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D8/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D9/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D10/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D11/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D12/15'21
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D1/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D2/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D3/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D4/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D5/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D6/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D7/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D8/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D9/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D10/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D11/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D12/15'22
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D1/15'23
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D2/15'23
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D3/15'23
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D4/15'23
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D5/15'23
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+D6/15'23
+U280.00
+T280.00
+CX
+PExample Auto Finance
+MCar payment
+L[Checking]
+^
+!Account
+NBrokerage
+TPort
+^
+!Type:Invst
+D3/ 6'21
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D3/ 7'21
+NBuy
+YExample Total Market Fund
+I82.96
+Q6.027
+U500.00
+T500.00
+CX
+^
+D6/ 6'21
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D6/ 7'21
+NBuy
+YExample Total Market Fund
+I84.58
+Q5.912
+U500.00
+T500.00
+CX
+^
+D9/ 6'21
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D9/ 7'21
+NBuy
+YExample Total Market Fund
+I87.1
+Q5.741
+U500.00
+T500.00
+CX
+^
+D12/ 6'21
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D12/ 7'21
+NBuy
+YExample Total Market Fund
+I88.75
+Q5.634
+U500.00
+T500.00
+CX
+^
+D12/20'21
+NDiv
+YExample Total Market Fund
+U58.53
+T58.53
+CX
+L_DivInc
+^
+D3/ 6'22
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D3/ 7'22
+NBuy
+YExample Total Market Fund
+I91.9
+Q5.441
+U500.00
+T500.00
+CX
+^
+D6/ 6'22
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D6/ 7'22
+NBuy
+YExample Total Market Fund
+I93.28
+Q5.36
+U500.00
+T500.00
+CX
+^
+D9/ 6'22
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D9/ 7'22
+NBuy
+YExample Total Market Fund
+I95.61
+Q5.23
+U500.00
+T500.00
+CX
+^
+D12/ 6'22
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D12/ 7'22
+NBuy
+YExample Total Market Fund
+I98.35
+Q5.084
+U500.00
+T500.00
+CX
+^
+D12/20'22
+NDiv
+YExample Total Market Fund
+U20.29
+T20.29
+CX
+L_DivInc
+^
+D3/ 6'23
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D3/ 7'23
+NBuy
+YExample Total Market Fund
+I100.84
+Q4.958
+U500.00
+T500.00
+CX
+^
+D6/ 6'23
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D6/ 7'23
+NBuy
+YExample Total Market Fund
+I102.31
+Q4.887
+U500.00
+T500.00
+CX
+^
+D9/ 6'23
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D9/ 7'23
+NBuy
+YExample Total Market Fund
+I104.46
+Q4.787
+U500.00
+T500.00
+CX
+^
+D12/ 6'23
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D12/ 7'23
+NBuy
+YExample Total Market Fund
+I107.38
+Q4.656
+U500.00
+T500.00
+CX
+^
+D12/20'23
+NDiv
+YExample Total Market Fund
+U81.28
+T81.28
+CX
+L_DivInc
+^
+D3/ 6'24
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D3/ 7'24
+NBuy
+YExample Total Market Fund
+I110.03
+Q4.544
+U500.00
+T500.00
+CX
+^
+D6/ 6'24
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D6/ 7'24
+NBuy
+YExample Total Market Fund
+I112.07
+Q4.461
+U500.00
+T500.00
+CX
+^
+D9/ 6'24
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D9/ 7'24
+NBuy
+YExample Total Market Fund
+I113.6
+Q4.401
+U500.00
+T500.00
+CX
+^
+D12/ 6'24
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D12/ 7'24
+NBuy
+YExample Total Market Fund
+I116.28
+Q4.3
+U500.00
+T500.00
+CX
+^
+D12/20'24
+NDiv
+YExample Total Market Fund
+U30.98
+T30.98
+CX
+L_DivInc
+^
+D3/ 6'25
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D3/ 7'25
+NBuy
+YExample Total Market Fund
+I118.53
+Q4.218
+U500.00
+T500.00
+CX
+^
+D6/ 6'25
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D6/ 7'25
+NBuy
+YExample Total Market Fund
+I120.38
+Q4.154
+U500.00
+T500.00
+CX
+^
+D9/ 6'25
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D9/ 7'25
+NBuy
+YExample Total Market Fund
+I122.86
+Q4.07
+U500.00
+T500.00
+CX
+^
+D12/ 6'25
+U500.00
+T500.00
+CX
+PTransfer to Brokerage
+L[Checking]
+^
+D12/ 7'25
+NBuy
+YExample Total Market Fund
+I124.77
+Q4.007
+U500.00
+T500.00
+CX
+^
+D12/20'25
+NDiv
+YExample Total Market Fund
+U21.20
+T21.20
+CX
+L_DivInc
+^
